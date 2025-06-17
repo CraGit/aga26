@@ -1,0 +1,21 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heading": "Providing solutions of every kind",
+      "content": "In a professional context it often happens that private or corporate clients order a publication to publish news.",
+      "youtube_video_id": "oRI37cOPBQQ",
+      "thumbnail_image": {
+        "dimensions": {
+          "width": 1200,
+          "height": 675
+        },
+        "alt": "Video thumbnail",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=675&fit=crop"
+      }
+    },
+    "items": []
+  }
+]

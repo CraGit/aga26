@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = HeroSliceSlice;
+type PageDocumentDataSlicesSlice = VideoSliceSlice | HeroSliceSlice;
 
 /**
  * Content for Page documents
@@ -184,6 +184,81 @@ export type HeroSliceSlice = prismic.SharedSlice<
   HeroSliceSliceVariation
 >;
 
+/**
+ * Primary content in *VideoSlice → Default → Primary*
+ */
+export interface VideoSliceSliceDefaultPrimary {
+  /**
+   * Heading field in *VideoSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter your heading
+   * - **API ID Path**: video_slice.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Content field in *VideoSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter your content
+   * - **API ID Path**: video_slice.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * YouTube Video ID field in *VideoSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., oRI37cOPBQQ
+   * - **API ID Path**: video_slice.default.primary.youtube_video_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  youtube_video_id: prismic.KeyTextField;
+
+  /**
+   * Custom Thumbnail Image (Optional) field in *VideoSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: video_slice.default.primary.thumbnail_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  thumbnail_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for VideoSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type VideoSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<VideoSliceSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *VideoSlice*
+ */
+type VideoSliceSliceVariation = VideoSliceSliceDefault;
+
+/**
+ * VideoSlice Shared Slice
+ *
+ * - **API ID**: `video_slice`
+ * - **Description**: VideoSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type VideoSliceSlice = prismic.SharedSlice<
+  "video_slice",
+  VideoSliceSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -213,6 +288,10 @@ declare module "@prismicio/client" {
       HeroSliceSliceDefaultPrimary,
       HeroSliceSliceVariation,
       HeroSliceSliceDefault,
+      VideoSliceSlice,
+      VideoSliceSliceDefaultPrimary,
+      VideoSliceSliceVariation,
+      VideoSliceSliceDefault,
     };
   }
 }
