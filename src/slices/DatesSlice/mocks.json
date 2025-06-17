@@ -1,0 +1,27 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heading": "Conference Schedule",
+      "image": {
+        "dimensions": {
+          "width": 600,
+          "height": 400
+        },
+        "alt": "Conference venue",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop"
+      },
+      "date_1": "June 15, 2025",
+      "participant_1": "Dr. John Smith - Opening Keynote: Future of AI in Music",
+      "date_2": "June 16, 2025", 
+      "participant_2": "Prof. Jane Doe - Research Presentation: Computational Creativity",
+      "date_3": "June 17, 2025",
+      "participant_3": "Dr. Michael Johnson - Panel Discussion: Ethics in AI Music",
+      "date_4": "June 18, 2025",
+      "participant_4": "Prof. Sarah Wilson - Closing Remarks: The Path Forward"
+    },
+    "items": []
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "id": "dates_slice",
+  "type": "SharedSlice",
+  "name": "DatesSlice",
+  "description": "DatesSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "Our Process"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 600,
+              "height": 400
+            }
+          }
+        },
+        "date_1": {
+          "type": "Text",
+          "config": {
+            "label": "Date 1",
+            "placeholder": "June 15, 2025"
+          }
+        },
+        "participant_1": {
+          "type": "Text",
+          "config": {
+            "label": "Participant 1",
+            "placeholder": "Dr. John Smith - Opening Keynote"
+          }
+        },
+        "date_2": {
+          "type": "Text",
+          "config": {
+            "label": "Date 2",
+            "placeholder": "June 16, 2025"
+          }
+        },
+        "participant_2": {
+          "type": "Text",
+          "config": {
+            "label": "Participant 2",
+            "placeholder": "Prof. Jane Doe - Research Presentation"
+          }
+        },
+        "date_3": {
+          "type": "Text",
+          "config": {
+            "label": "Date 3",
+            "placeholder": "June 17, 2025"
+          }
+        },
+        "participant_3": {
+          "type": "Text",
+          "config": {
+            "label": "Participant 3",
+            "placeholder": "Dr. Michael Johnson - Panel Discussion"
+          }
+        },
+        "date_4": {
+          "type": "Text",
+          "config": {
+            "label": "Date 4",
+            "placeholder": "June 18, 2025"
+          }
+        },
+        "participant_4": {
+          "type": "Text",
+          "config": {
+            "label": "Participant 4",
+            "placeholder": "Prof. Sarah Wilson - Closing Remarks"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

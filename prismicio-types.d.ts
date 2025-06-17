@@ -4,7 +4,10 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = VideoSliceSlice | HeroSliceSlice;
+type PageDocumentDataSlicesSlice =
+  | DatesSliceSlice
+  | VideoSliceSlice
+  | HeroSliceSlice;
 
 /**
  * Content for Page documents
@@ -66,6 +69,141 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 export type AllDocumentTypes = PageDocument;
+
+/**
+ * Primary content in *DatesSlice → Default → Primary*
+ */
+export interface DatesSliceSliceDefaultPrimary {
+  /**
+   * Heading field in *DatesSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Our Process
+   * - **API ID Path**: dates_slice.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Image field in *DatesSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dates_slice.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Date 1 field in *DatesSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: June 15, 2025
+   * - **API ID Path**: dates_slice.default.primary.date_1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  date_1: prismic.KeyTextField;
+
+  /**
+   * Participant 1 field in *DatesSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Dr. John Smith - Opening Keynote
+   * - **API ID Path**: dates_slice.default.primary.participant_1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  participant_1: prismic.KeyTextField;
+
+  /**
+   * Date 2 field in *DatesSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: June 16, 2025
+   * - **API ID Path**: dates_slice.default.primary.date_2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  date_2: prismic.KeyTextField;
+
+  /**
+   * Participant 2 field in *DatesSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Prof. Jane Doe - Research Presentation
+   * - **API ID Path**: dates_slice.default.primary.participant_2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  participant_2: prismic.KeyTextField;
+
+  /**
+   * Date 3 field in *DatesSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: June 17, 2025
+   * - **API ID Path**: dates_slice.default.primary.date_3
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  date_3: prismic.KeyTextField;
+
+  /**
+   * Participant 3 field in *DatesSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Dr. Michael Johnson - Panel Discussion
+   * - **API ID Path**: dates_slice.default.primary.participant_3
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  participant_3: prismic.KeyTextField;
+
+  /**
+   * Date 4 field in *DatesSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: June 18, 2025
+   * - **API ID Path**: dates_slice.default.primary.date_4
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  date_4: prismic.KeyTextField;
+
+  /**
+   * Participant 4 field in *DatesSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Prof. Sarah Wilson - Closing Remarks
+   * - **API ID Path**: dates_slice.default.primary.participant_4
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  participant_4: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for DatesSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type DatesSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<DatesSliceSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *DatesSlice*
+ */
+type DatesSliceSliceVariation = DatesSliceSliceDefault;
+
+/**
+ * DatesSlice Shared Slice
+ *
+ * - **API ID**: `dates_slice`
+ * - **Description**: DatesSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type DatesSliceSlice = prismic.SharedSlice<
+  "dates_slice",
+  DatesSliceSliceVariation
+>;
 
 /**
  * Primary content in *HeroSlice → Default → Primary*
@@ -284,6 +422,10 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      DatesSliceSlice,
+      DatesSliceSliceDefaultPrimary,
+      DatesSliceSliceVariation,
+      DatesSliceSliceDefault,
       HeroSliceSlice,
       HeroSliceSliceDefaultPrimary,
       HeroSliceSliceVariation,
