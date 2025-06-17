@@ -4,23 +4,12 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = RichTextSlice;
+type PageDocumentDataSlicesSlice = HeroSliceSlice;
 
 /**
  * Content for Page documents
  */
 interface PageDocumentData {
-  /**
-   * Title field in *Page*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.TitleField;
-
   /**
    * Slice Zone field in *Page*
    *
@@ -79,48 +68,120 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument;
 
 /**
- * Primary content in *RichText → Primary*
+ * Primary content in *HeroSlice → Default → Primary*
  */
-export interface RichTextSliceDefaultPrimary {
+export interface HeroSliceSliceDefaultPrimary {
   /**
-   * Content field in *RichText → Primary*
+   * Heading field in *HeroSlice → Default → Primary*
    *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Lorem ipsum...
-   * - **API ID Path**: rich_text.primary.content
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter your heading
+   * - **API ID Path**: hero_slice.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  content: prismic.RichTextField;
+  heading: prismic.KeyTextField;
+
+  /**
+   * Subheading field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter your subheading
+   * - **API ID Path**: hero_slice.default.primary.subheading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subheading: prismic.KeyTextField;
+
+  /**
+   * Background Image field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+
+  /**
+   * Primary Button Text field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Get Started
+   * - **API ID Path**: hero_slice.default.primary.primary_button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  primary_button_text: prismic.KeyTextField;
+
+  /**
+   * Primary Button Link field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.primary_button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  primary_button_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Secondary Button Text field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Learn More
+   * - **API ID Path**: hero_slice.default.primary.secondary_button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  secondary_button_text: prismic.KeyTextField;
+
+  /**
+   * Secondary Button Link field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.secondary_button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  secondary_button_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 }
 
 /**
- * Default variation for RichText Slice
+ * Default variation for HeroSlice Slice
  *
  * - **API ID**: `default`
- * - **Description**: RichText
+ * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type RichTextSliceDefault = prismic.SharedSliceVariation<
+export type HeroSliceSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<RichTextSliceDefaultPrimary>,
+  Simplify<HeroSliceSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Slice variation for *RichText*
+ * Slice variation for *HeroSlice*
  */
-type RichTextSliceVariation = RichTextSliceDefault;
+type HeroSliceSliceVariation = HeroSliceSliceDefault;
 
 /**
- * RichText Shared Slice
+ * HeroSlice Shared Slice
  *
- * - **API ID**: `rich_text`
- * - **Description**: RichText
+ * - **API ID**: `hero_slice`
+ * - **Description**: HeroSlice
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type RichTextSlice = prismic.SharedSlice<
-  "rich_text",
-  RichTextSliceVariation
+export type HeroSliceSlice = prismic.SharedSlice<
+  "hero_slice",
+  HeroSliceSliceVariation
 >;
 
 declare module "@prismicio/client" {
@@ -131,16 +192,27 @@ declare module "@prismicio/client" {
     ): prismic.Client<AllDocumentTypes>;
   }
 
+  interface CreateWriteClient {
+    (
+      repositoryNameOrEndpoint: string,
+      options: prismic.WriteClientConfig,
+    ): prismic.WriteClient<AllDocumentTypes>;
+  }
+
+  interface CreateMigration {
+    (): prismic.Migration<AllDocumentTypes>;
+  }
+
   namespace Content {
     export type {
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
-      RichTextSlice,
-      RichTextSliceDefaultPrimary,
-      RichTextSliceVariation,
-      RichTextSliceDefault,
+      HeroSliceSlice,
+      HeroSliceSliceDefaultPrimary,
+      HeroSliceSliceVariation,
+      HeroSliceSliceDefault,
     };
   }
 }

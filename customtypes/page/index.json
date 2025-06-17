@@ -13,21 +13,12 @@
           "placeholder": ""
         }
       },
-      "title": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Title",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "heading1"
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "rich_text": {
+            "hero_slice": {
               "type": "SharedSlice"
             }
           }
