@@ -24,7 +24,7 @@ const rtfComponents = {
     <p className="text-body-text color-gray-600 mb-20">{children}</p>
   ),
   strong: ({ children }) => (
-    <strong className="color-gray-900 font-bold">{children}</strong>
+    <strong className="color-gray-900">{children}</strong>
   ),
   hyperlink: ({ node, children, key }) => (
     <PrismicNextLink
@@ -55,16 +55,9 @@ const rtfComponents = {
   preformatted: ({ children }) => (
     <pre
       className="bg-gray-100 p-20 mb-20 border-radius-8"
-      style={{
-        overflowX: "auto",
-        fontSize: "14px",
-        fontFamily: "monospace",
-        backgroundColor: "#f8f9fa",
-        border: "1px solid #e9ecef",
-        borderRadius: "8px",
-      }}
+      style={{ overflowX: "auto", fontSize: "14px", fontFamily: "monospace" }}
     >
-      <code className="color-gray-900">{children}</code>
+      {children}
     </pre>
   ),
   image: ({ node }) => (
@@ -90,11 +83,6 @@ const rtfComponents = {
         allowFullScreen
       />
     </div>
-  ),
-  // Additional elements for comprehensive coverage
-  span: ({ children }) => <span>{children}</span>,
-  label: ({ children }) => (
-    <label className="text-body-text color-gray-600">{children}</label>
   ),
 };
 
@@ -122,7 +110,7 @@ const rtfComponentsLight = {
     <p className="text-body-text color-gray-600 mb-20">{children}</p>
   ),
   strong: ({ children }) => (
-    <strong className="color-gray-900 font-bold">{children}</strong>
+    <strong className="color-gray-900">{children}</strong>
   ),
   hyperlink: ({ node, children, key }) => (
     <PrismicNextLink
@@ -153,16 +141,9 @@ const rtfComponentsLight = {
   preformatted: ({ children }) => (
     <pre
       className="bg-gray-100 p-20 mb-20 border-radius-8"
-      style={{
-        overflowX: "auto",
-        fontSize: "14px",
-        fontFamily: "monospace",
-        backgroundColor: "#f8f9fa",
-        border: "1px solid #e9ecef",
-        borderRadius: "8px",
-      }}
+      style={{ overflowX: "auto", fontSize: "14px", fontFamily: "monospace" }}
     >
-      <code className="color-gray-900">{children}</code>
+      {children}
     </pre>
   ),
   image: ({ node }) => (
@@ -188,11 +169,6 @@ const rtfComponentsLight = {
         allowFullScreen
       />
     </div>
-  ),
-  // Additional elements for comprehensive coverage
-  span: ({ children }) => <span>{children}</span>,
-  label: ({ children }) => (
-    <label className="text-body-text color-gray-600">{children}</label>
   ),
 };
 

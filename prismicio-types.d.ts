@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | FaqSliceSlice
   | ContentSlice
   | SponsorsSlice
   | DatesSliceSlice
@@ -250,6 +251,76 @@ type DatesSliceSliceVariation = DatesSliceSliceDefault;
 export type DatesSliceSlice = prismic.SharedSlice<
   "dates_slice",
   DatesSliceSliceVariation
+>;
+
+/**
+ * Primary content in *FaqSlice → Default → Primary*
+ */
+export interface FaqSliceSliceDefaultPrimary {
+  /**
+   * Heading field in *FaqSlice → Default → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: Frequently Asked Questions
+   * - **API ID Path**: faq_slice.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField;
+}
+
+/**
+ * Primary content in *FaqSlice → Items*
+ */
+export interface FaqSliceSliceDefaultItem {
+  /**
+   * Question field in *FaqSlice → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter the question
+   * - **API ID Path**: faq_slice.items[].question
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  question: prismic.KeyTextField;
+
+  /**
+   * Answer field in *FaqSlice → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the answer
+   * - **API ID Path**: faq_slice.items[].answer
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  answer: prismic.RichTextField;
+}
+
+/**
+ * Default variation for FaqSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FaqSliceSliceDefaultPrimary>,
+  Simplify<FaqSliceSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *FaqSlice*
+ */
+type FaqSliceSliceVariation = FaqSliceSliceDefault;
+
+/**
+ * FaqSlice Shared Slice
+ *
+ * - **API ID**: `faq_slice`
+ * - **Description**: FaqSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqSliceSlice = prismic.SharedSlice<
+  "faq_slice",
+  FaqSliceSliceVariation
 >;
 
 /**
@@ -557,6 +628,11 @@ declare module "@prismicio/client" {
       DatesSliceSliceDefaultPrimary,
       DatesSliceSliceVariation,
       DatesSliceSliceDefault,
+      FaqSliceSlice,
+      FaqSliceSliceDefaultPrimary,
+      FaqSliceSliceDefaultItem,
+      FaqSliceSliceVariation,
+      FaqSliceSliceDefault,
       HeroSliceSlice,
       HeroSliceSliceDefaultPrimary,
       HeroSliceSliceVariation,

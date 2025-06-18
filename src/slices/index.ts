@@ -8,4 +8,5 @@ export const components = {
   dates_slice: dynamic(() => import("./DatesSlice")),
   sponsors: dynamic(() => import("./SponsorsSlice")),
   content: dynamic(() => import("./ContentSlice")),
+  faq_slice: dynamic(() => import("./FaqSlice")),
 };
