@@ -1,0 +1,51 @@
+{
+  "id": "small_hero",
+  "type": "SharedSlice",
+  "name": "SmallHero",
+  "description": "SmallHero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "Enter the heading...",
+            "allowTargetBlank": true,
+            "multi": "heading1"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "Enter the description...",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "Choose background color",
+            "options": [
+              "Default",
+              "Gray",
+              "Brand",
+              "Dark",
+              "Navy"
+            ]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

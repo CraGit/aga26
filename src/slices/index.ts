@@ -9,4 +9,5 @@ export const components = {
   sponsors: dynamic(() => import("./SponsorsSlice")),
   content: dynamic(() => import("./ContentSlice")),
   faq_slice: dynamic(() => import("./FaqSlice")),
+  small_hero: dynamic(() => import("./SmallHeroSlice")),
 };

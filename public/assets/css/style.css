@@ -9120,4 +9120,25 @@ input.qty-val {
     display: none;
   }
 }
+
+/* Custom Section Wrapper Responsive Margins */
+.section-content-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  .section-content-wrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-content-wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

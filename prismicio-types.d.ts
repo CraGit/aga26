@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | SmallHeroSlice
   | FaqSliceSlice
   | ContentSlice
   | SponsorsSlice
@@ -441,6 +442,71 @@ export type HeroSliceSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *SmallHero → Default → Primary*
+ */
+export interface SmallHeroSliceDefaultPrimary {
+  /**
+   * Heading field in *SmallHero → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the heading...
+   * - **API ID Path**: small_hero.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Description field in *SmallHero → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the description...
+   * - **API ID Path**: small_hero.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Background Color field in *SmallHero → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: Choose background color
+   * - **API ID Path**: small_hero.default.primary.background_color
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  background_color: prismic.SelectField<"Default" | "Gray" | "Brand" | "Dark">;
+}
+
+/**
+ * Default variation for SmallHero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SmallHeroSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SmallHeroSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SmallHero*
+ */
+type SmallHeroSliceVariation = SmallHeroSliceDefault;
+
+/**
+ * SmallHero Shared Slice
+ *
+ * - **API ID**: `small_hero`
+ * - **Description**: SmallHero
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SmallHeroSlice = prismic.SharedSlice<
+  "small_hero",
+  SmallHeroSliceVariation
+>;
+
+/**
  * Primary content in *Sponsors → Default → Primary*
  */
 export interface SponsorsSliceDefaultPrimary {
@@ -637,6 +703,10 @@ declare module "@prismicio/client" {
       HeroSliceSliceDefaultPrimary,
       HeroSliceSliceVariation,
       HeroSliceSliceDefault,
+      SmallHeroSlice,
+      SmallHeroSliceDefaultPrimary,
+      SmallHeroSliceVariation,
+      SmallHeroSliceDefault,
       SponsorsSlice,
       SponsorsSliceDefaultPrimary,
       SponsorsSliceDefaultItem,

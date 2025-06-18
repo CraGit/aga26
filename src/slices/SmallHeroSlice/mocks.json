@@ -1,0 +1,24 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heading": [
+        {
+          "type": "heading1",
+          "text": "Contact Us",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Equidem necessitatibus ei eam, ceteros expetenda hendrerit ei per, tation vituperatoribus ut.",
+          "spans": []
+        }
+      ],
+      "background_color": "Navy"
+    },
+    "items": []
+  }
+]

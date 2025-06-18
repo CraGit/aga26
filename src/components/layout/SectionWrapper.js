@@ -11,7 +11,9 @@ const SectionWrapper = ({
     <section className={`section-box ${spacing} ${background} ${className}`}>
       <div className={`container ${containerClass}`}>
         <div className="row">
-          <div className="col-lg-12">{children}</div>
+          <div className="col-lg-12">
+            <div className="section-content-wrapper">{children}</div>
+          </div>
         </div>
       </div>
     </section>
