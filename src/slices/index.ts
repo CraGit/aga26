@@ -7,4 +7,5 @@ export const components = {
   video_slice: dynamic(() => import("./VideoSlice")),
   dates_slice: dynamic(() => import("./DatesSlice")),
   sponsors: dynamic(() => import("./SponsorsSlice")),
+  content: dynamic(() => import("./ContentSlice")),
 };

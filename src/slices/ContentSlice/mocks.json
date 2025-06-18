@@ -1,0 +1,46 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "content": [
+        {
+          "type": "heading2",
+          "text": "About the Conference",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "The AGA26 Conference brings together leading researchers and practitioners in the field of algorithmic composition and music technology. This year's event will feature keynote presentations, panel discussions, and hands-on workshops.",
+          "spans": []
+        },
+        {
+          "type": "heading3",
+          "text": "Key Topics",
+          "spans": []
+        },
+        {
+          "type": "list-item",
+          "text": "Artificial Intelligence in Music Creation",
+          "spans": []
+        },
+        {
+          "type": "list-item",
+          "text": "Computational Creativity and Algorithmic Composition",
+          "spans": []
+        },
+        {
+          "type": "list-item",
+          "text": "Human-Computer Interaction in Musical Performance",
+          "spans": []
+        },
+        {
+          "type": "list-item",
+          "text": "Ethical Considerations in AI Music Systems",
+          "spans": []
+        }
+      ]
+    },
+    "items": []
+  }
+]

@@ -3,72 +3,82 @@ import { PrismicNextImage } from "@prismicio/next";
 
 const rtfComponents = {
   heading1: ({ children }) => (
-    <h1 className="text-4xl font-semibold leading-tight font-fancy text-white sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight">
-      {children}
-    </h1>
+    <h1 className="text-heading-1 color-gray-900 mb-30">{children}</h1>
   ),
   heading2: ({ children }) => (
-    <h2 className="text-2xl font-semibold font-fancy leading-tight text-white sm:text-3xl sm:leading-tight lg:text-4xl lg:leading-tight">
-      {children}
-    </h2>
+    <h2 className="text-heading-2 color-gray-900 mb-25">{children}</h2>
   ),
   heading3: ({ children }) => (
-    <h3 className="text-lg font-semibold font-fancy leading-tight text-white sm:text-xl sm:leading-tight lg:text-2xl lg:leading-tight">
-      {children}
-    </h3>
+    <h3 className="text-heading-3 color-gray-900 mb-20">{children}</h3>
+  ),
+  heading4: ({ children }) => (
+    <h4 className="text-heading-4 color-gray-900 mb-15">{children}</h4>
+  ),
+  heading5: ({ children }) => (
+    <h5 className="text-heading-5 color-gray-900 mb-15">{children}</h5>
+  ),
+  heading6: ({ children }) => (
+    <h6 className="text-heading-6 color-gray-900 mb-10">{children}</h6>
   ),
   paragraph: ({ children }) => (
-    <p className="py-2 leading-7 text-base font-normal font-sans text-white mb-4">
-      {children}
-    </p>
+    <p className="text-body-text color-gray-600 mb-20">{children}</p>
   ),
   strong: ({ children }) => (
-    <span className="font-bold tracking-normal  font-fancy text-white">
-      {children}
-    </span>
+    <strong className="color-gray-900">{children}</strong>
   ),
   hyperlink: ({ node, children, key }) => (
     <PrismicNextLink
       key={key}
       field={node.data}
-      className="text-zuta hover:text-zuta/80 font-semibold font-sans underline decoration-dotted underline-offset-2"
+      className="color-green-900 text-decoration-underline"
     >
       {children}
     </PrismicNextLink>
   ),
-  em: ({ children }) => (
-    <em className="italic font-sans text-gray-300">{children}</em>
-  ),
+  em: ({ children }) => <em className="color-gray-500">{children}</em>,
   listItem: ({ children }) => (
-    <li className="mb-3 ml-2 font-sans text-white">{children}</li>
+    <li className="text-body-text color-gray-600 mb-10">{children}</li>
   ),
   oListItem: ({ children }) => (
-    <li className="mb-3 ml-2 font-sans text-white">{children}</li>
+    <li className="text-body-text color-gray-600 mb-10">{children}</li>
   ),
   list: ({ children }) => (
-    <ul className="mb-6 list-disc pl-6 ml-4 font-sans text-white">
+    <ul className="mb-30" style={{ paddingLeft: "20px", listStyle: "disc" }}>
       {children}
     </ul>
   ),
   oList: ({ children }) => (
-    <ol className="mb-6 list-decimal pl-6 ml-4 font-sans text-white">
+    <ol className="mb-30" style={{ paddingLeft: "20px", listStyle: "decimal" }}>
       {children}
     </ol>
   ),
   preformatted: ({ children }) => (
-    <pre className="bg-[#f4f4f4] rounded-lg p-4 mb-4 overflow-x-auto text-sm font-mono">
+    <pre
+      className="bg-gray-100 p-20 mb-20 border-radius-8"
+      style={{ overflowX: "auto", fontSize: "14px", fontFamily: "monospace" }}
+    >
       {children}
     </pre>
   ),
   image: ({ node }) => (
-    <div className="relative w-full aspect-video mb-4 mt-6">
-      <PrismicNextImage field={node} />
+    <div className="mb-30 mt-30">
+      <PrismicNextImage field={node} className="img-responsive bdrd-16" />
     </div>
   ),
   embed: ({ node }) => (
-    <div className="relative aspect-video mb-4 mt-6">
+    <div
+      className="mb-30 mt-30"
+      style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}
+    >
       <iframe
-        className="absolute w-full h-full top-0 left-0 rounded-lg"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          borderRadius: "16px",
+        }}
         src={node.oembed.embed_url}
         allowFullScreen
       />
@@ -76,75 +86,85 @@ const rtfComponents = {
   ),
 };
 
-// Dark text components for light backgrounds (like yellow MeetUs section)
-const rtfComponentsDark = {
+// Light theme components for white/light backgrounds
+const rtfComponentsLight = {
   heading1: ({ children }) => (
-    <h1 className="text-4xl font-semibold leading-tight font-fancy text-black sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight">
-      {children}
-    </h1>
+    <h1 className="text-heading-1 color-gray-900 mb-30">{children}</h1>
   ),
   heading2: ({ children }) => (
-    <h2 className="text-2xl font-semibold font-fancy leading-tight text-black sm:text-3xl sm:leading-tight lg:text-4xl lg:leading-tight">
-      {children}
-    </h2>
+    <h2 className="text-heading-2 color-gray-900 mb-25">{children}</h2>
   ),
   heading3: ({ children }) => (
-    <h3 className="text-lg font-semibold font-fancy leading-tight text-black sm:text-xl sm:leading-tight lg:text-2xl lg:leading-tight">
-      {children}
-    </h3>
+    <h3 className="text-heading-3 color-gray-900 mb-20">{children}</h3>
+  ),
+  heading4: ({ children }) => (
+    <h4 className="text-heading-4 color-gray-900 mb-15">{children}</h4>
+  ),
+  heading5: ({ children }) => (
+    <h5 className="text-heading-5 color-gray-900 mb-15">{children}</h5>
+  ),
+  heading6: ({ children }) => (
+    <h6 className="text-heading-6 color-gray-900 mb-10">{children}</h6>
   ),
   paragraph: ({ children }) => (
-    <p className="py-2 leading-7 text-base font-normal font-sans text-black mb-4">
-      {children}
-    </p>
+    <p className="text-body-text color-gray-600 mb-20">{children}</p>
   ),
   strong: ({ children }) => (
-    <span className="font-bold tracking-normal font-fancy text-black">
-      {children}
-    </span>
+    <strong className="color-gray-900">{children}</strong>
   ),
   hyperlink: ({ node, children, key }) => (
     <PrismicNextLink
       key={key}
       field={node.data}
-      className="text-black hover:text-gray-700 font-semibold font-sans underline decoration-dotted underline-offset-2"
+      className="color-green-900 text-decoration-underline"
     >
       {children}
     </PrismicNextLink>
   ),
-  em: ({ children }) => (
-    <em className="italic font-sans text-gray-800">{children}</em>
-  ),
+  em: ({ children }) => <em className="color-gray-500">{children}</em>,
   listItem: ({ children }) => (
-    <li className="mb-3 ml-2 font-sans text-black">{children}</li>
+    <li className="text-body-text color-gray-600 mb-10">{children}</li>
   ),
   oListItem: ({ children }) => (
-    <li className="mb-3 ml-2 font-sans text-black">{children}</li>
+    <li className="text-body-text color-gray-600 mb-10">{children}</li>
   ),
   list: ({ children }) => (
-    <ul className="mb-6 list-disc pl-6 ml-4 font-sans text-black">
+    <ul className="mb-30" style={{ paddingLeft: "20px", listStyle: "disc" }}>
       {children}
     </ul>
   ),
   oList: ({ children }) => (
-    <ol className="mb-6 list-decimal pl-6 ml-4 font-sans text-black">
+    <ol className="mb-30" style={{ paddingLeft: "20px", listStyle: "decimal" }}>
       {children}
     </ol>
   ),
   preformatted: ({ children }) => (
-    <pre className="bg-gray-100 rounded-lg p-4 mb-4 overflow-x-auto text-sm font-mono text-black">
+    <pre
+      className="bg-gray-100 p-20 mb-20 border-radius-8"
+      style={{ overflowX: "auto", fontSize: "14px", fontFamily: "monospace" }}
+    >
       {children}
     </pre>
   ),
   image: ({ node }) => (
-    <div className="relative w-full aspect-video mb-4 mt-6">
-      <PrismicNextImage field={node} />
+    <div className="mb-30 mt-30">
+      <PrismicNextImage field={node} className="img-responsive bdrd-16" />
     </div>
   ),
   embed: ({ node }) => (
-    <div className="relative aspect-video mb-4 mt-6">
+    <div
+      className="mb-30 mt-30"
+      style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}
+    >
       <iframe
-        className="absolute w-full h-full top-0 left-0 rounded-lg"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          borderRadius: "16px",
+        }}
         src={node.oembed.embed_url}
         allowFullScreen
       />
@@ -153,4 +173,4 @@ const rtfComponentsDark = {
 };
 
 export default rtfComponents;
-export { rtfComponentsDark };
+export { rtfComponentsLight };
