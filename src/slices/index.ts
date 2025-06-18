@@ -6,4 +6,5 @@ export const components = {
   hero_slice: dynamic(() => import("./HeroSlice")),
   video_slice: dynamic(() => import("./VideoSlice")),
   dates_slice: dynamic(() => import("./DatesSlice")),
+  sponsors: dynamic(() => import("./SponsorsSlice")),
 };

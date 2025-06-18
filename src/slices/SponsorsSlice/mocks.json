@@ -1,0 +1,120 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heading": "Trusted by the world's leading companies",
+      "subheading": "Join thousands of companies that trust our platform"
+    },
+    "items": [
+      {
+        "logo": {
+          "dimensions": {
+            "width": 200,
+            "height": 80
+          },
+          "alt": "Agon",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=80&fit=crop"
+        },
+        "company_name": "Agon"
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 200,
+            "height": 80
+          },
+          "alt": "Monst",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=80&fit=crop"
+        },
+        "company_name": "Monst"
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 200,
+            "height": 80
+          },
+          "alt": "Figwire",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=80&fit=crop"
+        },
+        "company_name": "Figwire"
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 200,
+            "height": 80
+          },
+          "alt": "Evara",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=80&fit=crop"
+        },
+        "company_name": "Evara"
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 200,
+            "height": 80
+          },
+          "alt": "Frox",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=80&fit=crop"
+        },
+        "company_name": "Frox"
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 200,
+            "height": 80
+          },
+          "alt": "Alithemes",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=80&fit=crop"
+        },
+        "company_name": "Alithemes"
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 200,
+            "height": 80
+          },
+          "alt": "NestMart",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=80&fit=crop"
+        },
+        "company_name": "NestMart"
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 200,
+            "height": 80
+          },
+          "alt": "TheFlow",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=80&fit=crop"
+        },
+        "company_name": "TheFlow"
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 200,
+            "height": 80
+          },
+          "alt": "Stacker",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=80&fit=crop"
+        },
+        "company_name": "Stacker"
+      }
+    ]
+  }
+]

@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | SponsorsSlice
   | DatesSliceSlice
   | VideoSliceSlice
   | HeroSliceSlice;
@@ -323,6 +324,86 @@ export type HeroSliceSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Sponsors → Default → Primary*
+ */
+export interface SponsorsSliceDefaultPrimary {
+  /**
+   * Heading field in *Sponsors → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Trusted by the world's leading companies
+   * - **API ID Path**: sponsors.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Subheading field in *Sponsors → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Join the companies that trust us
+   * - **API ID Path**: sponsors.default.primary.subheading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subheading: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Sponsors → Items*
+ */
+export interface SponsorsSliceDefaultItem {
+  /**
+   * Logo field in *Sponsors → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sponsors.items[].logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Company Name field in *Sponsors → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Company name for alt text
+   * - **API ID Path**: sponsors.items[].company_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_name: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Sponsors Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SponsorsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SponsorsSliceDefaultPrimary>,
+  Simplify<SponsorsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Sponsors*
+ */
+type SponsorsSliceVariation = SponsorsSliceDefault;
+
+/**
+ * Sponsors Shared Slice
+ *
+ * - **API ID**: `sponsors`
+ * - **Description**: Sponsors
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SponsorsSlice = prismic.SharedSlice<
+  "sponsors",
+  SponsorsSliceVariation
+>;
+
+/**
  * Primary content in *VideoSlice → Default → Primary*
  */
 export interface VideoSliceSliceDefaultPrimary {
@@ -430,6 +511,11 @@ declare module "@prismicio/client" {
       HeroSliceSliceDefaultPrimary,
       HeroSliceSliceVariation,
       HeroSliceSliceDefault,
+      SponsorsSlice,
+      SponsorsSliceDefaultPrimary,
+      SponsorsSliceDefaultItem,
+      SponsorsSliceVariation,
+      SponsorsSliceDefault,
       VideoSliceSlice,
       VideoSliceSliceDefaultPrimary,
       VideoSliceSliceVariation,
