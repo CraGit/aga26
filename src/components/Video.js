@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import SectionWrapper from "./layout/SectionWrapper";
 
 const Video = ({ slice }) => {
   const { heading, content, youtube_video_id, thumbnail_image } = slice.primary;
@@ -30,66 +31,60 @@ const Video = ({ slice }) => {
         }
       `}</style>
 
-      <section className="section-box mt-100">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-1 col-sm-1 col-12" />
-            <div className="col-lg-10 col-sm-10 col-12 text-center">
-              {heading && (
-                <h2 className="text-heading-1 color-gray-900 mb-10">
-                  {heading}
-                </h2>
-              )}
-              {content && (
-                <p className="text-body-lead-large color-gray-600 mt-20">
-                  {content}
-                </p>
-              )}
-            </div>
-            <div className="col-lg-1 col-sm-1 col-12" />
+      <SectionWrapper>
+        <div className="row">
+          <div className="col-lg-1 col-sm-1 col-12" />
+          <div className="col-lg-10 col-sm-10 col-12 text-center">
+            {heading && (
+              <h2 className="text-heading-1 color-gray-900 mb-10">{heading}</h2>
+            )}
+            {content && (
+              <p className="text-body-lead-large color-gray-600 mt-20">
+                {content}
+              </p>
+            )}
           </div>
+          <div className="col-lg-1 col-sm-1 col-12" />
         </div>
 
         {youtube_video_id && (
-          <div className="section-box mt-70">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-1" />
-                <div className="col-lg-10">
-                  <div className="box-image">
-                    <a
-                      className="popup-youtube btn-play-video btn-play-middle"
-                      onClick={openModal}
-                    ></a>
-                    {thumbnail_image?.url ? (
-                      <Image
-                        width="0"
-                        height="0"
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                        className="img-responsive bdrd-16"
-                        src={thumbnail_image.url}
-                        alt={thumbnail_image.alt || "Video thumbnail"}
-                      />
-                    ) : (
-                      <Image
-                        width="0"
-                        height="0"
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                        className="img-responsive bdrd-16"
-                        src={`https://img.youtube.com/vi/${youtube_video_id}/maxresdefault.jpg`}
-                        alt="Video thumbnail"
-                      />
-                    )}
-                  </div>
+          <div className="mt-70">
+            <div className="row">
+              <div className="col-lg-1" />
+              <div className="col-lg-10">
+                <div className="box-image">
+                  <a
+                    className="popup-youtube btn-play-video btn-play-middle"
+                    onClick={openModal}
+                  ></a>
+                  {thumbnail_image?.url ? (
+                    <Image
+                      width="0"
+                      height="0"
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
+                      className="img-responsive bdrd-16"
+                      src={thumbnail_image.url}
+                      alt={thumbnail_image.alt || "Video thumbnail"}
+                    />
+                  ) : (
+                    <Image
+                      width="0"
+                      height="0"
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
+                      className="img-responsive bdrd-16"
+                      src={`https://img.youtube.com/vi/${youtube_video_id}/maxresdefault.jpg`}
+                      alt="Video thumbnail"
+                    />
+                  )}
                 </div>
-                <div className="col-lg-1" />
               </div>
+              <div className="col-lg-1" />
             </div>
           </div>
         )}
-      </section>
+      </SectionWrapper>
 
       {modal ? (
         <section className="modal__bg" onClick={openModal}>
