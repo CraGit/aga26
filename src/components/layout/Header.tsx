@@ -73,11 +73,11 @@ const Header = ({ handleOpen, headerStyle, isSidebarOpen }: HeaderProps) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="header-right">
+                        {/* <div className="header-right">
                             <div className="block-signin">
                                 <Link href="/contact" className="btn btn-default hover-up icon-arrow-right">Get Started</Link>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </header>
