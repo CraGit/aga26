@@ -18,6 +18,17 @@ type PageDocumentDataSlicesSlice =
  */
 interface PageDocumentData {
   /**
+   * title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
    * Slice Zone field in *Page*
    *
    * - **Field Type**: Slice Zone
@@ -473,7 +484,9 @@ export interface SmallHeroSliceDefaultPrimary {
    * - **API ID Path**: small_hero.default.primary.background_color
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  background_color: prismic.SelectField<"Default" | "Gray" | "Brand" | "Dark">;
+  background_color: prismic.SelectField<
+    "Default" | "Gray" | "Brand" | "Dark" | "Navy"
+  >;
 }
 
 /**
