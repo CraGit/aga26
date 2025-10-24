@@ -29,9 +29,9 @@ const Footer = () => {
                 AGA26 Conference
               </div>
               <div className="mt-20 text-body-text color-gray-600">
-                info@aga26.org
+                info@aga26.com.hr
               </div>
-              <div className="text-body-text color-gray-600">www.aga26.org</div>
+              <div className="text-body-text color-gray-600">aga26.com.hr</div>
             </div>
             <div className="col-lg-3 width-20 mb-30">
               <h4 className="text-heading-5">Conference</h4>
