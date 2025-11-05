@@ -34,7 +34,7 @@ const Dates = ({ slice }) => {
         <div className="col-lg-6 col-md-12 col-sm-12">
           <div className="box-optimized pl-30">
             {heading && (
-              <h2 className="text-heading-1 color-gray-900 mb-40">{heading}</h2>
+              <h2 className="text-heading-1 color-gray-900 mb-40 text-center">{heading}</h2>
             )}
 
             <div className="row">
