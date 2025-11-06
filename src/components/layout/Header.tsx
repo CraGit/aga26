@@ -61,9 +61,9 @@ const Header = ({ handleOpen, headerStyle, isSidebarOpen }: HeaderProps) => {
                                         <li>
                                             <Link href="/about">About</Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link href="/archives">Archives</Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </nav>
                                 <div className={`burger-icon burger-icon-white d-block d-xl-none ${isSidebarOpen ? 'd-none' : ''}`} onClick={handleOpen}>

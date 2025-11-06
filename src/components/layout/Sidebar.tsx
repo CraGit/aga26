@@ -57,9 +57,9 @@ const Sidebar = ({ openClass, handleClose, isOpen }: SidebarProps) => {
                                         <li>
                                             <Link href="/about" onClick={handleClose}>About</Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link href="/archives" onClick={handleClose}>Archives</Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </nav>
                             </div>
