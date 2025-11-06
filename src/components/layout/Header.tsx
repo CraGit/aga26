@@ -43,21 +43,21 @@ const Header = ({ handleOpen, headerStyle, isSidebarOpen }: HeaderProps) => {
                                         <li>
                                             <Link href="/iamuc">IAMUC</Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link href="/iamus">IAMUS</Link>
-                                        </li>
-                                        <li>
+                                        </li> */}
+                                        {/* <li>
                                             <Link href="/committees">Committees</Link>
-                                        </li>
-                                        <li>
+                                        </li> */}
+                                        {/* <li>
                                             <Link href="/programs">Programs</Link>
-                                        </li>
-                                        <li>
+                                        </li> */}
+                                        {/* <li>
                                             <Link href="/registration">Registration</Link>
-                                        </li>
-                                        <li>
+                                        </li> */}
+                                        {/* <li>
                                             <Link href="/travel">Travel</Link>
-                                        </li>
+                                        </li> */}
                                         <li>
                                             <Link href="/about">About</Link>
                                         </li>
