@@ -39,7 +39,7 @@ const Footer = () => {
                 <li>
                   <Link href="/iamuc">IAMUC</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/iamus">IAMUS</Link>
                 </li>
                 <li>
@@ -47,13 +47,13 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link href="/committees">Committees</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/about">About</Link>
                 </li>
               </ul>
             </div>
-            <div className="col-lg-3 width-20 mb-30">
+            {/* <div className="col-lg-3 width-20 mb-30">
               <h4 className="text-heading-5">Participation</h4>
               <ul className="menu-footer mt-20">
                 <li>
@@ -89,7 +89,7 @@ const Footer = () => {
                   <Link href="/about">News & Updates</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="footer-bottom mt-20">
             <div className="row">
