@@ -1,0 +1,42 @@
+{
+  "id": "key_dates",
+  "type": "SharedSlice",
+  "name": "KeyDates",
+  "description": "Key dates timeline / grid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "Enter heading..."
+          }
+        }
+      },
+      "items": {
+        "date": {
+          "type": "Text",
+          "config": {
+            "label": "Date",
+            "placeholder": "e.g. 1 December"
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "Enter content for this date",
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -9139,6 +9139,138 @@ input.qty-val {
     padding-left: 80px;
     padding-right: 80px;
   }
+
+/* Compact header signin block (keeps button padding unchanged) */
+.block-signin-compact {
+  margin-left: 8px;
+}
+
+@media (max-width: 1199.98px) {
+  .block-signin-compact {
+    margin-left: 0;
+  }
+}
+
+/* KeyDates slice styles */
+.key-dates {
+  padding: 40px 0;
+}
+
+/* Vertical timeline container */
+.key-dates .timeline-list {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+/* If a row wrapper exists, collapse it so grid rules apply to .timeline-item */
+.key-dates .timeline-list .timeline-row {
+  display: contents;
+}
+
+/* vertical central line */
+.key-dates .timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #E4E7EC;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 20px 0 28px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Place content in left or right column and align it toward the center line */
+.key-dates .timeline-list .timeline-item.left .timeline-content {
+  grid-column: 1 / 2;
+  justify-self: end; /* right edge close to center */
+  text-align: right;
+  margin-right: 48px; /* push content away from center line */
+}
+.key-dates .timeline-list .timeline-item.right .timeline-content {
+  grid-column: 2 / 3;
+  justify-self: start; /* left edge close to center */
+  text-align: left;
+  margin-left: 48px; /* push content away from center line */
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0F385C;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.key-date-value,
+.key-date-value {
+  font-family: var(--chivo);
+  font-weight: 700;
+  color: #0F385C;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.key-date-content,
+.key-date-item .key-date-content {
+  color: #475467;
+  line-height: 1.6;
+}
+
+/* Mobile: bring line closer and scale markers */
+@media (max-width: 991.98px) {
+  .key-dates .timeline-list {
+    padding-top: 6px;
+  }
+  .key-dates .timeline-list::before {
+    left: 32px;
+    transform: none;
+  }
+  .timeline-item {
+    padding-left: 72px;
+    padding-right: 0;
+    flex-direction: row; /* force single-column on mobile */
+  }
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 72px;
+    padding-right: 0;
+    flex-direction: row;
+  }
+  .timeline-item .timeline-content {
+    text-align: left;
+  }
+  .timeline-marker {
+    left: 18px;
+    transform: none;
+    width: 28px;
+    height: 28px;
+    top: 6px;
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

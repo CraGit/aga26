@@ -45,6 +45,9 @@
             },
             "hero_slice": {
               "type": "SharedSlice"
+            },
+            "key_dates": {
+              "type": "SharedSlice"
             }
           }
         }

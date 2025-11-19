@@ -1,0 +1,57 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heading": [
+        {
+          "type": "heading1",
+          "text": "Key Dates",
+          "spans": []
+        }
+      ]
+    },
+    "items": [
+      {
+        "date": "1 December",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Manuscript system opens",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "date": "1 February",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Abstracts due",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "date": "1 March",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Notification of abstract acceptance",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "date": "1 May",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Full papers due",
+            "spans": []
+          }
+        ]
+      }
+    ]
+  }
+]
