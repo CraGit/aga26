@@ -9250,20 +9250,40 @@ input.qty-val {
     left: 32px;
     transform: none;
   }
-  .timeline-item {
-    padding-left: 72px;
-    padding-right: 0;
-    flex-direction: row; /* force single-column on mobile */
+
+  /* Force strict single-column stacked layout with markers/line on the left */
+  .key-dates .timeline-list .timeline-item,
+  .key-dates .timeline-list .timeline-item.left,
+  .key-dates .timeline-list .timeline-item.right {
+    display: block !important;
+    grid-column: 1 / -1 !important;
+    padding: 8px 16px 12px 72px !important; /* left gutter for marker */
+    margin: 0 0 12px 0 !important;
   }
-  .timeline-item.left,
-  .timeline-item.right {
-    padding-left: 72px;
-    padding-right: 0;
-    flex-direction: row;
+
+  /* Content spans full width and aligns left - override desktop left/right rules */
+  .key-dates .timeline-list .timeline-item .timeline-content,
+  .key-dates .timeline-list .timeline-item.left .timeline-content,
+  .key-dates .timeline-list .timeline-item.right .timeline-content {
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    justify-self: unset !important;
+    grid-column: auto !important;
   }
-  .timeline-item .timeline-content {
-    text-align: left;
+
+  /* Ensure the date heading is left aligned with no top gap */
+  .key-dates .timeline-list .timeline-item .key-date-value,
+  .key-dates .timeline-list .timeline-item.left .key-date-value,
+  .key-dates .timeline-list .timeline-item.right .key-date-value {
+    text-align: left !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
   }
+
   .timeline-marker {
     left: 18px;
     transform: none;
