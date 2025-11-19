@@ -63,6 +63,13 @@
             "label": "Secondary Button Link",
             "placeholder": ""
           }
+        },
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {}
+          }
         }
       },
       "items": {}

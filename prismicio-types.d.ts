@@ -152,51 +152,6 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument;
 
 /**
- * Primary content in *Content → Default → Primary*
- */
-export interface ContentSliceDefaultPrimary {
-  /**
-   * Content field in *Content → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Write your content here...
-   * - **API ID Path**: content.default.primary.content
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  content: prismic.RichTextField;
-}
-
-/**
- * Default variation for Content Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type ContentSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<ContentSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *Content*
- */
-type ContentSliceVariation = ContentSliceDefault;
-
-/**
- * Content Shared Slice
- *
- * - **API ID**: `content`
- * - **Description**: Content
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type ContentSlice = prismic.SharedSlice<
-  "content",
-  ContentSliceVariation
->;
-
-/**
  * Primary content in *DatesSlice → Default → Primary*
  */
 export interface DatesSliceSliceDefaultPrimary {
@@ -332,6 +287,51 @@ export type DatesSliceSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Content → Default → Primary*
+ */
+export interface ContentSliceDefaultPrimary {
+  /**
+   * Content field in *Content → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Write your content here...
+   * - **API ID Path**: content.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  content: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Content Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ContentSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContentSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Content*
+ */
+type ContentSliceVariation = ContentSliceDefault;
+
+/**
+ * Content Shared Slice
+ *
+ * - **API ID**: `content`
+ * - **Description**: Content
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ContentSlice = prismic.SharedSlice<
+  "content",
+  ContentSliceVariation
+>;
+
+/**
  * Primary content in *FaqSlice → Default → Primary*
  */
 export interface FaqSliceSliceDefaultPrimary {
@@ -399,73 +399,6 @@ type FaqSliceSliceVariation = FaqSliceSliceDefault;
 export type FaqSliceSlice = prismic.SharedSlice<
   "faq_slice",
   FaqSliceSliceVariation
->;
-
-/**
- * Primary content in *SmallHero → Default → Primary*
- */
-export interface SmallHeroSliceDefaultPrimary {
-  /**
-   * Heading field in *SmallHero → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Enter the heading...
-   * - **API ID Path**: small_hero.default.primary.heading
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  heading: prismic.RichTextField;
-
-  /**
-   * Description field in *SmallHero → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Enter the description...
-   * - **API ID Path**: small_hero.default.primary.description
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Background Color field in *SmallHero → Default → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: Choose background color
-   * - **API ID Path**: small_hero.default.primary.background_color
-   * - **Documentation**: https://prismic.io/docs/fields/select
-   */
-  background_color: prismic.SelectField<
-    "Default" | "Gray" | "Brand" | "Dark" | "Navy"
-  >;
-}
-
-/**
- * Default variation for SmallHero Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type SmallHeroSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<SmallHeroSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *SmallHero*
- */
-type SmallHeroSliceVariation = SmallHeroSliceDefault;
-
-/**
- * SmallHero Shared Slice
- *
- * - **API ID**: `small_hero`
- * - **Description**: SmallHero
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type SmallHeroSlice = prismic.SharedSlice<
-  "small_hero",
-  SmallHeroSliceVariation
 >;
 
 /**
@@ -553,6 +486,16 @@ export interface HeroSliceSliceDefaultPrimary {
     prismic.FieldState,
     never
   >;
+
+  /**
+   * Logo field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.logo
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  logo: prismic.ImageField<never>;
 }
 
 /**
@@ -583,6 +526,73 @@ type HeroSliceSliceVariation = HeroSliceSliceDefault;
 export type HeroSliceSlice = prismic.SharedSlice<
   "hero_slice",
   HeroSliceSliceVariation
+>;
+
+/**
+ * Primary content in *SmallHero → Default → Primary*
+ */
+export interface SmallHeroSliceDefaultPrimary {
+  /**
+   * Heading field in *SmallHero → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the heading...
+   * - **API ID Path**: small_hero.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Description field in *SmallHero → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the description...
+   * - **API ID Path**: small_hero.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Background Color field in *SmallHero → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: Choose background color
+   * - **API ID Path**: small_hero.default.primary.background_color
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  background_color: prismic.SelectField<
+    "Default" | "Gray" | "Brand" | "Dark" | "Navy"
+  >;
+}
+
+/**
+ * Default variation for SmallHero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SmallHeroSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SmallHeroSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SmallHero*
+ */
+type SmallHeroSliceVariation = SmallHeroSliceDefault;
+
+/**
+ * SmallHero Shared Slice
+ *
+ * - **API ID**: `small_hero`
+ * - **Description**: SmallHero
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SmallHeroSlice = prismic.SharedSlice<
+  "small_hero",
+  SmallHeroSliceVariation
 >;
 
 /**
@@ -653,6 +663,81 @@ type KeyDatesSliceVariation = KeyDatesSliceDefault;
 export type KeyDatesSlice = prismic.SharedSlice<
   "key_dates",
   KeyDatesSliceVariation
+>;
+
+/**
+ * Primary content in *VideoSlice → Default → Primary*
+ */
+export interface VideoSliceSliceDefaultPrimary {
+  /**
+   * Heading field in *VideoSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter your heading
+   * - **API ID Path**: video_slice.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Content field in *VideoSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter your content
+   * - **API ID Path**: video_slice.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * YouTube Video ID field in *VideoSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., oRI37cOPBQQ
+   * - **API ID Path**: video_slice.default.primary.youtube_video_id
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  youtube_video_id: prismic.KeyTextField;
+
+  /**
+   * Custom Thumbnail Image (Optional) field in *VideoSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: video_slice.default.primary.thumbnail_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  thumbnail_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for VideoSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type VideoSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<VideoSliceSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *VideoSlice*
+ */
+type VideoSliceSliceVariation = VideoSliceSliceDefault;
+
+/**
+ * VideoSlice Shared Slice
+ *
+ * - **API ID**: `video_slice`
+ * - **Description**: VideoSlice
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type VideoSliceSlice = prismic.SharedSlice<
+  "video_slice",
+  VideoSliceSliceVariation
 >;
 
 /**
@@ -735,81 +820,6 @@ export type SponsorsSlice = prismic.SharedSlice<
   SponsorsSliceVariation
 >;
 
-/**
- * Primary content in *VideoSlice → Default → Primary*
- */
-export interface VideoSliceSliceDefaultPrimary {
-  /**
-   * Heading field in *VideoSlice → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Enter your heading
-   * - **API ID Path**: video_slice.default.primary.heading
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
-   * Content field in *VideoSlice → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Enter your content
-   * - **API ID Path**: video_slice.default.primary.content
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  content: prismic.KeyTextField;
-
-  /**
-   * YouTube Video ID field in *VideoSlice → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: e.g., oRI37cOPBQQ
-   * - **API ID Path**: video_slice.default.primary.youtube_video_id
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  youtube_video_id: prismic.KeyTextField;
-
-  /**
-   * Custom Thumbnail Image (Optional) field in *VideoSlice → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: video_slice.default.primary.thumbnail_image
-   * - **Documentation**: https://prismic.io/docs/fields/image
-   */
-  thumbnail_image: prismic.ImageField<never>;
-}
-
-/**
- * Default variation for VideoSlice Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type VideoSliceSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<VideoSliceSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *VideoSlice*
- */
-type VideoSliceSliceVariation = VideoSliceSliceDefault;
-
-/**
- * VideoSlice Shared Slice
- *
- * - **API ID**: `video_slice`
- * - **Description**: VideoSlice
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type VideoSliceSlice = prismic.SharedSlice<
-  "video_slice",
-  VideoSliceSliceVariation
->;
-
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -835,41 +845,41 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
-      ContentSlice,
-      ContentSliceDefaultPrimary,
-      ContentSliceVariation,
-      ContentSliceDefault,
       DatesSliceSlice,
       DatesSliceSliceDefaultPrimary,
       DatesSliceSliceVariation,
       DatesSliceSliceDefault,
+      ContentSlice,
+      ContentSliceDefaultPrimary,
+      ContentSliceVariation,
+      ContentSliceDefault,
       FaqSliceSlice,
       FaqSliceSliceDefaultPrimary,
       FaqSliceSliceDefaultItem,
       FaqSliceSliceVariation,
       FaqSliceSliceDefault,
-      SmallHeroSlice,
-      SmallHeroSliceDefaultPrimary,
-      SmallHeroSliceVariation,
-      SmallHeroSliceDefault,
       HeroSliceSlice,
       HeroSliceSliceDefaultPrimary,
       HeroSliceSliceVariation,
       HeroSliceSliceDefault,
+      SmallHeroSlice,
+      SmallHeroSliceDefaultPrimary,
+      SmallHeroSliceVariation,
+      SmallHeroSliceDefault,
       KeyDatesSlice,
       KeyDatesSliceDefaultPrimary,
       KeyDatesSliceDefaultItem,
       KeyDatesSliceVariation,
       KeyDatesSliceDefault,
+      VideoSliceSlice,
+      VideoSliceSliceDefaultPrimary,
+      VideoSliceSliceVariation,
+      VideoSliceSliceDefault,
       SponsorsSlice,
       SponsorsSliceDefaultPrimary,
       SponsorsSliceDefaultItem,
       SponsorsSliceVariation,
       SponsorsSliceDefault,
-      VideoSliceSlice,
-      VideoSliceSliceDefaultPrimary,
-      VideoSliceSliceVariation,
-      VideoSliceSliceDefault,
     };
   }
 }

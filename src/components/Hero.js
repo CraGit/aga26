@@ -1,5 +1,5 @@
 "use client";
-import { PrismicNextLink } from "@prismicio/next";
+import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
 
 const Hero = ({ slice }) => {
   const {
@@ -10,6 +10,7 @@ const Hero = ({ slice }) => {
     primary_button_link,
     secondary_button_text,
     secondary_button_link,
+    logo,
   } = slice.primary;
 
   return (
@@ -85,6 +86,18 @@ const Hero = ({ slice }) => {
           </div>
         </div>
       </div>
+      {logo?.url && (
+        <div className="container mt-50">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <PrismicNextImage
+                field={logo}
+                style={{ maxHeight: "80px", width: "auto" }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
