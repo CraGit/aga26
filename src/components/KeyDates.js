@@ -1,7 +1,6 @@
 "use client";
 import SectionWrapper from "./layout/SectionWrapper";
 import KeyDate from "./KeyDate";
-import { PrismicRichText } from "@prismicio/react";
 
 const KeyDates = ({ slice }) => {
   const { heading } = slice.primary;
