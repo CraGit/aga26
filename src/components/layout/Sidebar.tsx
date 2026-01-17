@@ -42,6 +42,9 @@ const Sidebar = ({ openClass, handleClose, isOpen }: SidebarProps) => {
                                         <li>
                                             <Link href="/committees" onClick={handleClose}>Committees</Link>
                                         </li>
+                                        <li>
+                                            <Link href="/travel-and-accommodations" onClick={handleClose}>Travel and Accommodations</Link>
+                                        </li>
                                         {/* <li>
                                             <Link href="/iamus" onClick={handleClose}>IAMUS</Link>
                                         </li>

@@ -16,9 +16,12 @@ const Footer = () => {
                 <span className="color-gray-900 text-heading-6 mr-30 text-mb-sm-20">
                   Ready to get started?
                 </span>
-                <Link href="/registration" className="btn btn-square">
-                  Register Now
-                </Link>
+                <a
+                  href="https://easychair.org/conferences/?conf=iamuc2026"
+                  className="btn btn-square"
+                >
+                  Abstract Submission
+                </a>
               </div>
             </div>
           </div>

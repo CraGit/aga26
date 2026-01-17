@@ -62,7 +62,7 @@ const rtfComponents = {
   ),
   image: ({ node }) => (
     <div className="mb-30 mt-30">
-      <PrismicNextImage field={node} className="img-responsive bdrd-16" />
+      <PrismicNextImage field={node} className="img-responsive bdrd-16" style={{ height: 'auto' }} />
     </div>
   ),
   embed: ({ node }) => (
@@ -148,7 +148,7 @@ const rtfComponentsLight = {
   ),
   image: ({ node }) => (
     <div className="mb-30 mt-30">
-      <PrismicNextImage field={node} className="img-responsive bdrd-16" />
+      <PrismicNextImage field={node} className="img-responsive bdrd-16" style={{ height: 'auto' }} />
     </div>
   ),
   embed: ({ node }) => (

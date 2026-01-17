@@ -1,83 +1,48 @@
 [
-  {
-    "variation": "default",
-    "name": "Default",
-    "slice_type": "faq_slice",
-    "items": [
-      {
-        "question": "What is the conference about?",
-        "answer": [
-          {
-            "type": "paragraph",
-            "text": "The AGA26 Conference brings together researchers, academicians, and industry professionals to share the latest developments in algebraic geometry and applications. This is a premier event featuring keynote speakers, research presentations, and networking opportunities.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "question": "When and where will the conference take place?",
-        "answer": [
-          {
-            "type": "paragraph",
-            "text": "The conference will be held from March 15-18, 2024, at the University Convention Center. Detailed venue information and directions will be provided to registered participants.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "question": "How do I register for the conference?",
-        "answer": [
-          {
-            "type": "paragraph",
-            "text": "Registration is available online through our conference website. Early bird registration offers discounted rates and closes on February 1, 2024. Regular registration continues until March 10, 2024.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "question": "What are the registration fees?",
-        "answer": [
-          {
-            "type": "paragraph",
-            "text": "Registration fees vary by participant type:",
-            "spans": []
-          },
-          {
-            "type": "list-item",
-            "text": "Academic faculty: $250 (early bird) / $300 (regular)",
-            "spans": []
-          },
-          {
-            "type": "list-item",
-            "text": "Graduate students: $150 (early bird) / $200 (regular)",
-            "spans": []
-          },
-          {
-            "type": "list-item",
-            "text": "Industry professionals: $400 (early bird) / $500 (regular)",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "question": "Can I submit a paper or abstract?",
-        "answer": [
-          {
-            "type": "paragraph",
-            "text": "Yes! We welcome paper submissions and abstract presentations. The deadline for submissions is January 15, 2024. Please visit our Call for Papers section for detailed submission guidelines and requirements.",
-            "spans": []
-          }
-        ]
-      }
-    ],
-    "primary": {
-      "heading": [
-        {
-          "type": "heading2",
-          "text": "Frequently Asked Questions",
-          "spans": []
-        }
-      ]
-    }
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Policeman"
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"question",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "biggest",
+							"type": "Text"
+						}
+					],
+					[
+						"answer",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Eu aliquip laboris commodo fugiat consectetur commodo tempor exercitation aliquip ut."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
 ]
