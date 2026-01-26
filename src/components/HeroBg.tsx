@@ -287,9 +287,15 @@ const HeroBg = ({ slice }: HeroBgProps) => {
             z-index: 2;
           }
 
+          /* extra vertical spacing for mobile */
+          .hero-bg {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+          }
+
           .hero-bg-content .col-12 {
-            padding-top: 5rem;
-            padding-bottom: 3rem;
+            padding-top: 6rem;
+            padding-bottom: 4rem;
           }
 
           .hero-subtitle {

@@ -97,9 +97,7 @@ const Footer = () => {
           <div className="footer-bottom mt-20">
             <div className="row">
               <div className="col-md-6">
-                <span className="color-gray-400 text-body-lead">
-                  © AGA26 Conference 2025
-                </span>
+                <span className="color-gray-400 text-body-lead">© AGA26</span>
                 <Link
                   href="/about"
                   className="text-body-text color-gray-400 ml-50"
@@ -114,12 +112,12 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="col-md-6 text-center text-lg-end text-md-end">
-                <div className="footer-social">
+                {/* <div className="footer-social">
                   <Link href="#" className="icon-socials icon-facebook"></Link>
                   <Link href="#" className="icon-socials icon-twitter"></Link>
                   <Link href="#" className="icon-socials icon-instagram"></Link>
                   <Link href="#" className="icon-socials icon-linkedin"></Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
