@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 
 export const components = {
   hero_slice: dynamic(() => import("./HeroSlice")),
+  hero_bg: dynamic(() => import("./HeroBgSlice")),
   video_slice: dynamic(() => import("./VideoSlice")),
   dates_slice: dynamic(() => import("./DatesSlice")),
   sponsors: dynamic(() => import("./SponsorsSlice")),

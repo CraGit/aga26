@@ -48,6 +48,9 @@
             },
             "key_dates": {
               "type": "SharedSlice"
+            },
+            "hero_bg": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -1,0 +1,74 @@
+{
+  "id": "hero_bg",
+  "type": "SharedSlice",
+  "name": "HeroBgSlice",
+  "description": "Large hero with background image, oversized decorative text and event meta.",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {}
+          }
+        },
+        "large_text": {
+          "type": "Text",
+          "config": {
+            "label": "Large Decorative Text",
+            "placeholder": "AGA26"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "The 26th Annual General Assembly",
+            "allowTargetBlank": true,
+            "multi": "heading1"
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": "Human-centred digital oceans..."
+          }
+        },
+        "date": {
+          "type": "Text",
+          "config": {
+            "label": "Date (short)",
+            "placeholder": "October 5 - 10 2026"
+          }
+        },
+        "location": {
+          "type": "Text",
+          "config": {
+            "label": "Location (short)",
+            "placeholder": "Split, CROATIA"
+          }
+        },
+        "overlay": {
+          "type": "Select",
+          "config": {
+            "label": "Overlay style",
+            "options": [
+              "dark-blue",
+              "soft-blue",
+              "none"
+            ]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
