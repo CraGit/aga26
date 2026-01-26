@@ -66,6 +66,29 @@
               "none"
             ]
           }
+        },
+        "logos": {
+          "type": "Group",
+          "config": {
+            "label": "Logos",
+            "fields": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo",
+                  "constraint": {}
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "https://",
+                  "select": null
+                }
+              }
+            }
+          }
         }
       },
       "items": {}

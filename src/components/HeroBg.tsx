@@ -80,6 +80,34 @@ const HeroBg = ({ slice }) => {
           </div>
         </div>
       </div>
+
+      {/* Logos bar */}
+      {slice?.primary?.logos && slice.primary.logos.length > 0 && (
+        <div className="hero-logos-bar" role="region" aria-label="Logos">
+          <div className="container">
+            <div className="logos-row">
+              {slice.primary.logos.map((l, i) => {
+                const img = l.logo || l.logoImage || null;
+                const href = l.link?.url || (l.link && l.link.href) || null;
+                const alt = img?.alt || `logo-${i}`;
+                const src = img?.url || img?.imageUrl || null;
+                const content = (
+                  <img key={i} src={src} alt={alt} style={{ maxHeight: 64, width: 'auto', display: 'block' }} />
+                );
+
+                return href ? (
+                  <a key={i} href={href} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block' }}>
+                    {content}
+                  </a>
+                ) : (
+                  <div key={i} style={{ display: 'inline-block' }}>{content}</div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
       <style jsx>{`
         .hero-bg {
           overflow: hidden;
@@ -183,23 +211,23 @@ const HeroBg = ({ slice }) => {
 
         @media (min-width: 1200px) {
           .hero-bg {
-            min-height: 92vh;
+            min-height: 70vh;
           }
 
           .hero-inner {
-            gap: clamp(1rem, 2vw, 3rem);
+            gap: clamp(0.5rem, 1vw, 1.5rem);
           }
 
           .hero-bg-large-text {
-            font-size: clamp(7.15rem, 14vw, 24.2rem);
+            font-size: clamp(6.5rem, 13vw, 22rem);
             opacity: 0.95;
-            margin-bottom: clamp(0.8rem, 2vw, 2rem);
+            margin-bottom: clamp(0.4rem, 1vw, 1rem);
             -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%);
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%);
           }
 
           .hero-bg-content .col-12 {
-            padding-top: 3rem;
+            padding-top: 1.25rem;
           }
 
           .hero-bg-content .container {
@@ -268,6 +296,36 @@ const HeroBg = ({ slice }) => {
           .hero-meta-value {
             font-size: clamp(1.05rem, 3vw, 1.25rem);
           }
+        }
+
+        /* logos bar */
+        .hero-logos-bar {
+          background: #fff;
+          padding: 0.5rem 0;
+          z-index: 1;
+        }
+
+        .logos-row {
+          display: flex;
+          gap: clamp(1rem, 3vw, 2rem);
+          align-items: center;
+          justify-content: center;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          padding: 0.5rem 0;
+        }
+
+        .logos-row img {
+          max-height: 64px;
+          height: auto;
+          width: auto;
+          display: block;
+        }
+
+        .logos-row a, .logos-row div {
+          display: inline-block;
+          padding: 0 0.5rem;
         }
       `}</style>
     </section>

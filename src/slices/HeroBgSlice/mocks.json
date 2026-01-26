@@ -4,7 +4,6 @@
 		"variation": "default",
 		"primary": {
 			"background_image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
@@ -22,7 +21,9 @@
 					},
 					"background": "transparent"
 				},
-				"alt": "refused"
+				"alt": "refused",
+				"credits": null,
+				"__TYPE__": "ImageContent"
 			},
 			"large_text": {
 				"__TYPE__": "FieldContent",
@@ -59,7 +60,33 @@
 				"__TYPE__": "FieldContent",
 				"value": "soft-blue",
 				"type": "Select"
-			}
+			},
+			"logos": [
+				{
+					"logo": {
+						"__TYPE__": "ImageContent",
+						"origin": { "id": "logo1", "url": "https://via.placeholder.com/280x80?text=Logo+1", "width": 280, "height": 80 },
+						"url": "https://via.placeholder.com/280x80?text=Logo+1",
+						"width": 280,
+						"height": 80,
+						"alt": "Logo 1",
+						"__TYPE__": "ImageContent"
+					},
+					"link": { "link_type": "Web", "url": "https://example.com" }
+				},
+				{
+					"logo": {
+						"__TYPE__": "ImageContent",
+						"origin": { "id": "logo2", "url": "https://via.placeholder.com/240x80?text=Logo+2", "width": 240, "height": 80 },
+						"url": "https://via.placeholder.com/240x80?text=Logo+2",
+						"width": 240,
+						"height": 80,
+						"alt": "Logo 2",
+						"__TYPE__": "ImageContent"
+					},
+					"link": { "link_type": "Web", "url": "https://example.org" }
+				}
+			]
 		},
 		"items": [
 			{

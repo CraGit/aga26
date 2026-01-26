@@ -403,6 +403,31 @@ export type FaqSliceSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *HeroBgSlice → Default → Primary → Logos*
+ */
+export interface HeroBgSliceDefaultPrimaryLogosItem {
+  /**
+   * Logo field in *HeroBgSlice → Default → Primary → Logos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_bg.default.primary.logos[].logo
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Link field in *HeroBgSlice → Default → Primary → Logos*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: https://
+   * - **API ID Path**: hero_bg.default.primary.logos[].link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
  * Primary content in *HeroBgSlice → Default → Primary*
  */
 export interface HeroBgSliceDefaultPrimary {
@@ -475,6 +500,16 @@ export interface HeroBgSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/select
    */
   overlay: prismic.SelectField<"dark-blue" | "soft-blue" | "none">;
+
+  /**
+   * Logos field in *HeroBgSlice → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_bg.default.primary.logos[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  logos: prismic.GroupField<Simplify<HeroBgSliceDefaultPrimaryLogosItem>>;
 }
 
 /**
@@ -962,6 +997,7 @@ declare module "@prismicio/client" {
       FaqSliceSliceVariation,
       FaqSliceSliceDefault,
       HeroBgSlice,
+      HeroBgSliceDefaultPrimaryLogosItem,
       HeroBgSliceDefaultPrimary,
       HeroBgSliceVariation,
       HeroBgSliceDefault,
