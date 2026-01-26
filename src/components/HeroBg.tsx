@@ -97,6 +97,7 @@ const HeroBg = ({ slice }) => {
           align-items: center;
           justify-content: center;
           gap: clamp(0.25rem, 0.8vw, 1.2rem);
+          z-index: 3; /* keep inner content above the overlay */
         }
 
         .hero-bg-large-text {
@@ -110,7 +111,7 @@ const HeroBg = ({ slice }) => {
           opacity: 0.95;
           letter-spacing: -0.02em;
           line-height: 0.85;
-          z-index: 1;
+          z-index: 6; /* sits above the overlay gradient */
           pointer-events: none;
           white-space: nowrap;
           text-transform: uppercase;
@@ -118,6 +119,19 @@ const HeroBg = ({ slice }) => {
           width: 100%;
           -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
           mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
+        }
+
+        /* bottom overlay fade for extra contrast */
+        .hero-bg::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: clamp(6rem, 18vh, 220px);
+          background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+          pointer-events: none;
+          z-index: 0; /* keep the overlay behind the hero content */
         }
 
         /* content column sizing and spacing */
@@ -128,7 +142,7 @@ const HeroBg = ({ slice }) => {
           padding-top: 2rem;
           padding-bottom: clamp(3rem, 6vw, 6rem);
           position: relative;
-          z-index: 3;
+          z-index: 8; /* ensure content sits above the hero overlay */
         }
 
         .hero-bg-content h1 {
@@ -138,10 +152,11 @@ const HeroBg = ({ slice }) => {
         }
 
         .hero-subtitle {
-          color: rgba(255,255,255,0.92);
-          margin: 1rem auto 1.5rem;
+          color: rgba(255,255,255,0.94);
+          margin: 1rem auto 1.25rem;
           max-width: 980px;
-          font-size: clamp(1rem, 2.2vw, 1.25rem);
+          font-size: clamp(1.1rem, 2.6vw, 1.4rem);
+          line-height: 1.25;
         }
 
         .hero-meta {
@@ -149,21 +164,21 @@ const HeroBg = ({ slice }) => {
           gap: 20px;
           background: rgba(255,255,255,0.08);
           border: 1px solid rgba(255,255,255,0.18);
-          padding: 12px 20px;
+          padding: 14px 22px;
           border-radius: 12px;
           color: #fff;
           align-items: center;
-          margin-top: 12px;
+          margin-top: 14px;
         }
 
         .hero-meta-label {
-          font-size: 0.75rem;
-          opacity: 0.9;
+          font-size: 0.85rem;
+          opacity: 0.95;
         }
 
         .hero-meta-value {
           font-weight: 700;
-          font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+          font-size: clamp(1.05rem, 1.9vw, 1.25rem);
         }
 
         @media (min-width: 1200px) {
@@ -192,11 +207,11 @@ const HeroBg = ({ slice }) => {
           }
 
           .hero-subtitle {
-            font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+            font-size: clamp(1.5rem, 1.8vw, 2rem);
           }
 
           .hero-meta-value {
-            font-size: clamp(1.1rem, 1.6vw, 1.25rem);
+            font-size: clamp(1.3rem, 1.8vw, 1.6rem);
           }
         }
 
@@ -234,9 +249,24 @@ const HeroBg = ({ slice }) => {
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
           }
 
+          /* make the bottom overlay stronger on small screens */
+          .hero-bg::after {
+            height: clamp(10rem, 30vh, 340px);
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+            z-index: 2;
+          }
+
           .hero-bg-content .col-12 {
             padding-top: 5rem;
             padding-bottom: 3rem;
+          }
+
+          .hero-subtitle {
+            font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+          }
+
+          .hero-meta-value {
+            font-size: clamp(1.05rem, 3vw, 1.25rem);
           }
         }
       `}</style>
