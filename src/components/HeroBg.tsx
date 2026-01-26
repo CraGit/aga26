@@ -1,16 +1,20 @@
 "use client";
 import React from "react";
+import { Content } from "@prismicio/client";
+import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 
-const HeroBg = ({ slice }) => {
+type HeroBgProps = { slice: Content.HeroBgSlice };
+
+const HeroBg = ({ slice }: HeroBgProps) => {
   const { background_image, large_text, title, subtitle, date, location, overlay } = slice.primary;
   const bgUrl = background_image?.url || null;
 
   const overlayGradient =
     overlay === "soft-blue"
-      ? "linear-gradient(180deg, rgba(24,58,122,0.8) 0%, rgba(24,58,122,0.4) 40%, rgba(24,58,122,0.05) 100%)"
+      ? "linear-gradient(180deg, rgba(15,56,92,0.8) 0%, rgba(15,56,92,0.4) 40%, rgba(15,56,92,0.05) 100%)"
       : overlay === "none"
         ? "rgba(0,0,0,0)"
-        : "linear-gradient(180deg, rgba(6,40,140,0.95) 0%, rgba(6,40,140,0.6) 30%, rgba(6,40,140,0.15) 60%, rgba(0,0,0,0) 100%)";
+        : "linear-gradient(180deg, rgba(15,56,92,0.95) 0%, rgba(15,56,92,0.6) 30%, rgba(15,56,92,0.15) 60%, rgba(0,0,0,0) 100%)";
 
   return (
     <section className="section-box">
@@ -40,15 +44,14 @@ const HeroBg = ({ slice }) => {
                 <div className="col-12" style={{ textAlign: "center", padding: "2rem 1rem" }}>
                   {title && (
                     <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-                      {Array.isArray(title) ? (
-                        <h1 style={{ color: "#fff", margin: 0 }}>
-                          {title.map((block, i) => (
-                            <span key={i}>{block.text}</span>
-                          ))}
-                        </h1>
-                      ) : (
-                        <h1 style={{ color: "#fff", margin: 0 }}>{title}</h1>
-                      )}
+                      <PrismicRichText
+                        field={title}
+                        components={{
+                          heading1: ({ children }) => (
+                            <h1 style={{ color: "#fff", margin: 0 }}>{children}</h1>
+                          ),
+                        }}
+                      />
                     </div>
                   )}
 
@@ -87,10 +90,10 @@ const HeroBg = ({ slice }) => {
           <div className="container">
             <div className="logos-row">
               {slice.primary.logos.map((l, i) => {
-                const img = l.logo || l.logoImage || null;
-                const href = l.link?.url || (l.link && l.link.href) || null;
+                const img = l.logo || null;
+                const href = (l.link as any)?.url || (l.link as any)?.href || null;
                 const alt = img?.alt || `logo-${i}`;
-                const src = img?.url || img?.imageUrl || null;
+                const src = img?.url || undefined;
                 const content = (
                   <img key={i} src={src} alt={alt} style={{ maxHeight: 64, width: 'auto', display: 'block' }} />
                 );
