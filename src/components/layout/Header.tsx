@@ -30,8 +30,8 @@ const Header = ({ handleOpen, headerStyle, isSidebarOpen }: HeaderProps) => {
                     <div className="main-header">
                         <div className="header-left">
                             <div className="header-logo">
-                                <Link href="/" className="d-flex">
-                                    <span className="text-heading-2 color-brand-1">AGA26</span>
+                                <Link href="/" className="d-flex" style={{ whiteSpace: 'nowrap' }}>
+                                    <span className="text-heading-2 color-brand-1" style={{ whiteSpace: 'nowrap' }}>IAMU AGA26</span>
                                 </Link>
                             </div>
                             <div className="header-nav">

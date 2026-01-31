@@ -9,7 +9,9 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-4 col-sm-6 text-center text-md-start">
                 <Link href="/">
-                  <span className="text-heading-2 color-brand-1">AGA26</span>
+                  <span className="text-heading-2 color-brand-1">
+                    IAMU AGA26
+                  </span>
                 </Link>
               </div>
               <div className="col-md-8 col-sm-6 text-center text-md-end">
@@ -29,7 +31,7 @@ const Footer = () => {
             <div className="col-lg-3 width-20 mb-30">
               <h4 className="text-heading-5">Contact</h4>
               <div className="mt-20 text-body-text color-gray-600 mb-20">
-                AGA26 Conference
+                IAMU AGA26 Conference
               </div>
               <div className="mt-20 text-body-text color-gray-600">
                 info@aga26.com.hr

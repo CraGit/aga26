@@ -16,7 +16,7 @@ const Sidebar = ({ openClass, handleClose, isOpen }: SidebarProps) => {
                         <div className="mobile-header-logo">
                             <div className="content">
                                 <h6 className="user-name text-heading-4 color-brand-1">
-                                    AGA26
+                                    IAMU AGA26
                                 </h6>
                             </div>
                         </div>

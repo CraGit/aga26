@@ -21,8 +21,8 @@ const noto = Noto_Sans({
 });
 
 export const metadata = {
-  title: 'AGA26',
-  description: 'AGA26',
+  title: 'IAMU AGA26',
+  description: 'IAMU AGA26',
 };
 
 export default function RootLayout({
