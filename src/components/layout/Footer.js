@@ -42,17 +42,17 @@ const Footer = () => {
               <h4 className="text-heading-5">Conference</h4>
               <ul className="menu-footer mt-20">
                 <li>
-                  <Link href="/iamuc">IAMUC</Link>
-                </li>
-                {/* <li>
-                  <Link href="/iamus">IAMUS</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <Link href="/programs">Programs</Link>
+                  <Link href="/iamuc">IAMUC</Link>
                 </li>
                 <li>
                   <Link href="/committees">Committees</Link>
-                </li> */}
+                </li>
+                <li>
+                  <Link href="/travel-and-accommodations">Travel and Accommodations</Link>
+                </li>
                 <li>
                   <Link href="/about">About</Link>
                 </li>
