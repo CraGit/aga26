@@ -99,7 +99,9 @@ const Footer = () => {
           <div className="footer-bottom mt-20">
             <div className="row">
               <div className="col-md-6">
-                <span className="color-gray-400 text-body-lead">© AGA26</span>
+                <span className="color-gray-400 text-body-lead">
+                  © IAMU AGA26
+                </span>
                 <Link
                   href="/about"
                   className="text-body-text color-gray-400 ml-50"
