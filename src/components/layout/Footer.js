@@ -14,12 +14,13 @@ const Footer = () => {
                   </span>
                 </Link>
               </div>
-              <div className="col-md-8 col-sm-6 text-center">
+              <div className="col-md-8 col-sm-6 text-center text-md-end">
                 <span className="color-gray-900 text-heading-6 mr-30 text-mb-sm-20">
                   Ready to get started?
                 </span>
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSfck3IpHfoDstQ8WHxsKx1M5260fjtj3tnvGdmjqYwBTCoS4Q/viewform"
+                  target="_blank"
                   className="btn btn-square"
                 >
                   Registration Form
@@ -104,6 +105,15 @@ const Footer = () => {
                 <span className="color-gray-400 text-body-lead">
                   © IAMU AGA26
                 </span>
+                <a
+                  href="https://killerclick.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-body-text color-gray-400 ml-50"
+                  style={{ display: 'inline-block' }}
+                >
+                  Web by Killer Click
+                </a>
                 <Link
                   href="/about"
                   className="text-body-text color-gray-400 ml-50"
