@@ -47,6 +47,7 @@ const RegistrationFees = ({ slice }: RegistrationFeesProps) => {
                                                 fontWeight: 700,
                                                 color: "#ffffff",
                                                 borderBottom: "none",
+                                                whiteSpace: "nowrap",
                                             }}
                                         >
                                             {fee_header || "Fee"}
@@ -57,9 +58,7 @@ const RegistrationFees = ({ slice }: RegistrationFeesProps) => {
                                     {slice.items.map((item, index) => (
                                         <tr key={index}>
                                             <td style={{ fontStyle: "italic" }}>{item.category}</td>
-                                            <td
-                                                style={{ textAlign: "right", fontStyle: "italic" }}
-                                            >
+                                            <td style={{ textAlign: "right", fontStyle: "italic", whiteSpace: "nowrap" }}>
                                                 {item.fee}
                                             </td>
                                         </tr>
