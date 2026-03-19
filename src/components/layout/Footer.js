@@ -110,7 +110,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-body-text color-gray-400 ml-50"
-                  style={{ display: 'inline-block' }}
+                  style={{ display: "inline-block" }}
                 >
                   Web by Killer Click
                 </a>

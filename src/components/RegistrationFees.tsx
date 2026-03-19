@@ -22,11 +22,11 @@ const RegistrationFees = ({ slice }: RegistrationFeesProps) => {
                             >
                                 <thead>
                                     <tr
-                                                            style={{
-                                                            backgroundColor: "#0F385C",
-                                                            color: "#ffffff",
-                                                        }}
-                                                        >
+                                        style={{
+                                            backgroundColor: "#0F385C",
+                                            color: "#ffffff",
+                                        }}
+                                    >
                                         <th
                                             style={{
                                                 textAlign: "left",
