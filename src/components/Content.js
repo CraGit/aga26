@@ -7,7 +7,7 @@ const Content = ({ slice }) => {
   const { content } = slice.primary;
 
   return (
-    <SectionWrapper>
+    <SectionWrapper spacing="mt-30">
       <div className="box-content">
         {content && (
           <PrismicRichText field={content} components={rtfComponents} />

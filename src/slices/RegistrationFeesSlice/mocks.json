@@ -1,0 +1,29 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heading": "Registration Fees",
+      "category_header": "Category",
+      "fee_header": "Fee"
+    },
+    "items": [
+      {
+        "category": "IAMU Member Participants",
+        "fee": "600 €"
+      },
+      {
+        "category": "Accompanying Person",
+        "fee": "300 €"
+      },
+      {
+        "category": "IAMU Non-Member Participants",
+        "fee": "650 €"
+      },
+      {
+        "category": "Student",
+        "fee": "300 €"
+      }
+    ]
+  }
+]

@@ -70,6 +70,7 @@ type ContentRelationshipFieldWithData<
 }[Exclude<TCustomType[number], string>["id"]];
 
 type PageDocumentDataSlicesSlice =
+  | RegistrationFeesSlice
   | SmallHeroSlice
   | FaqSliceSlice
   | ContentSlice
@@ -737,6 +738,96 @@ export type KeyDatesSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *RegistrationFees → Default → Primary*
+ */
+export interface RegistrationFeesSliceDefaultPrimary {
+  /**
+   * Section Heading field in *RegistrationFees → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Registration Fees
+   * - **API ID Path**: registration_fees.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Category Column Header field in *RegistrationFees → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Category
+   * - **API ID Path**: registration_fees.default.primary.category_header
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  category_header: prismic.KeyTextField;
+
+  /**
+   * Fee Column Header field in *RegistrationFees → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Fee
+   * - **API ID Path**: registration_fees.default.primary.fee_header
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  fee_header: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *RegistrationFees → Items*
+ */
+export interface RegistrationFeesSliceDefaultItem {
+  /**
+   * Category field in *RegistrationFees → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: IAMU Member Participants
+   * - **API ID Path**: registration_fees.items[].category
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  category: prismic.KeyTextField;
+
+  /**
+   * Fee field in *RegistrationFees → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: 600 €
+   * - **API ID Path**: registration_fees.items[].fee
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  fee: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for RegistrationFees Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RegistrationFeesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<RegistrationFeesSliceDefaultPrimary>,
+  Simplify<RegistrationFeesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *RegistrationFees*
+ */
+type RegistrationFeesSliceVariation = RegistrationFeesSliceDefault;
+
+/**
+ * RegistrationFees Shared Slice
+ *
+ * - **API ID**: `registration_fees`
+ * - **Description**: Registration fee table with category and fee columns
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RegistrationFeesSlice = prismic.SharedSlice<
+  "registration_fees",
+  RegistrationFeesSliceVariation
+>;
+
+/**
  * Primary content in *SmallHero → Default → Primary*
  */
 export interface SmallHeroSliceDefaultPrimary {
@@ -1010,6 +1101,11 @@ declare module "@prismicio/client" {
       KeyDatesSliceDefaultItem,
       KeyDatesSliceVariation,
       KeyDatesSliceDefault,
+      RegistrationFeesSlice,
+      RegistrationFeesSliceDefaultPrimary,
+      RegistrationFeesSliceDefaultItem,
+      RegistrationFeesSliceVariation,
+      RegistrationFeesSliceDefault,
       SmallHeroSlice,
       SmallHeroSliceDefaultPrimary,
       SmallHeroSliceVariation,

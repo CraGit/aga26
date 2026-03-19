@@ -12,4 +12,5 @@ export const components = {
   faq_slice: dynamic(() => import("./FaqSlice")),
   small_hero: dynamic(() => import("./SmallHeroSlice")),
   key_dates: dynamic(() => import("./KeyDatesSlice")),
+  registration_fees: dynamic(() => import("./RegistrationFeesSlice")),
 };

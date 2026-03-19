@@ -1,0 +1,55 @@
+{
+  "id": "registration_fees",
+  "type": "SharedSlice",
+  "name": "RegistrationFees",
+  "description": "Registration fee table with category and fee columns",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Section Heading",
+            "placeholder": "Registration Fees"
+          }
+        },
+        "category_header": {
+          "type": "Text",
+          "config": {
+            "label": "Category Column Header",
+            "placeholder": "Category"
+          }
+        },
+        "fee_header": {
+          "type": "Text",
+          "config": {
+            "label": "Fee Column Header",
+            "placeholder": "Fee"
+          }
+        }
+      },
+      "items": {
+        "category": {
+          "type": "Text",
+          "config": {
+            "label": "Category",
+            "placeholder": "IAMU Member Participants"
+          }
+        },
+        "fee": {
+          "type": "Text",
+          "config": {
+            "label": "Fee",
+            "placeholder": "600 €"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -14,15 +14,15 @@ const Footer = () => {
                   </span>
                 </Link>
               </div>
-              <div className="col-md-8 col-sm-6 text-center text-md-end">
+              <div className="col-md-8 col-sm-6 text-center">
                 <span className="color-gray-900 text-heading-6 mr-30 text-mb-sm-20">
                   Ready to get started?
                 </span>
                 <a
-                  href="https://easychair.org/conferences/?conf=iamuc2026"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfck3IpHfoDstQ8WHxsKx1M5260fjtj3tnvGdmjqYwBTCoS4Q/viewform"
                   className="btn btn-square"
                 >
-                  Abstract Submission
+                  Registration Form
                 </a>
               </div>
             </div>
@@ -51,7 +51,9 @@ const Footer = () => {
                   <Link href="/committees">Committees</Link>
                 </li>
                 <li>
-                  <Link href="/travel-and-accommodations">Travel and Accommodations</Link>
+                  <Link href="/travel-and-accommodations">
+                    Travel and Accommodations
+                  </Link>
                 </li>
                 <li>
                   <Link href="/about">About</Link>
