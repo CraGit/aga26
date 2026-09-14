@@ -1,0 +1,23 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"items": [],
+		"primary": {
+			"button": {
+				"key": "54c5973c-b6fd-4da3-9e16-eda705c1a71f",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://example.com/programme",
+					"text": "View Programme"
+				}
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Explore the full programme"
+			}
+		},
+		"variation": "default"
+	}
+]

@@ -1,0 +1,10 @@
+{
+  "repositoryName": "aga26",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./src/slices"],
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "routes": [
+    { "type": "page", "uid": "home", "path": "/" },
+    { "type": "page", "path": "/:uid" }
+  ]
+}

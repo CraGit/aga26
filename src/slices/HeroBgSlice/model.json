@@ -1,63 +1,62 @@
 {
-  "id": "hero_bg",
-  "type": "SharedSlice",
-  "name": "HeroBgSlice",
   "description": "Large hero with background image, oversized decorative text and event meta.",
+  "id": "hero_bg",
+  "name": "HeroBgSlice",
+  "type": "SharedSlice",
   "variations": [
     {
-      "id": "default",
-      "name": "Default",
-      "docURL": "",
-      "version": "initial",
       "description": "Default",
+      "docURL": "",
+      "id": "default",
       "imageUrl": "",
+      "items": {},
+      "name": "Default",
       "primary": {
         "background_image": {
-          "type": "Image",
           "config": {
-            "label": "Background Image",
-            "constraint": {}
-          }
+            "constraint": {},
+            "label": "Background Image"
+          },
+          "type": "Image"
         },
         "large_text": {
-          "type": "Text",
           "config": {
             "label": "Large Decorative Text",
             "placeholder": "AGA26"
-          }
+          },
+          "type": "Text"
         },
         "title": {
-          "type": "StructuredText",
           "config": {
-            "label": "Title",
-            "placeholder": "The 26th Annual General Assembly",
             "allowTargetBlank": true,
-            "multi": "heading1"
-          }
+            "label": "Title",
+            "multi": "heading1",
+            "placeholder": "The 26th Annual General Assembly"
+          },
+          "type": "StructuredText"
         },
         "subtitle": {
-          "type": "Text",
           "config": {
             "label": "Subtitle",
             "placeholder": "Human-centred digital oceans..."
-          }
+          },
+          "type": "Text"
         },
         "date": {
-          "type": "Text",
           "config": {
             "label": "Date (short)",
             "placeholder": "October 5 - 10 2026"
-          }
+          },
+          "type": "Text"
         },
         "location": {
-          "type": "Text",
           "config": {
             "label": "Location (short)",
             "placeholder": "Split, CROATIA"
-          }
+          },
+          "type": "Text"
         },
         "overlay": {
-          "type": "Select",
           "config": {
             "label": "Overlay style",
             "options": [
@@ -65,33 +64,34 @@
               "soft-blue",
               "none"
             ]
-          }
+          },
+          "type": "Select"
         },
         "logos": {
-          "type": "Group",
           "config": {
-            "label": "Logos",
             "fields": {
               "logo": {
-                "type": "Image",
                 "config": {
-                  "label": "Logo",
-                  "constraint": {}
-                }
+                  "constraint": {},
+                  "label": "Logo"
+                },
+                "type": "Image"
               },
               "link": {
-                "type": "Link",
                 "config": {
                   "label": "Link",
                   "placeholder": "https://",
                   "select": null
-                }
+                },
+                "type": "Link"
               }
-            }
-          }
+            },
+            "label": "Logos"
+          },
+          "type": "Group"
         }
       },
-      "items": {}
+      "version": "initial"
     }
   ]
 }

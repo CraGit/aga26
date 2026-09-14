@@ -76,7 +76,7 @@ const Hero = ({ slice }) => {
                 {secondary_button_text && secondary_button_link && (
                   <PrismicNextLink
                     field={secondary_button_link}
-                    className="btn btn-link icon-arrow-right color-gray-900 text-heading-6"
+                    className="btn btn-link icon-arrow-right color-green-900 text-heading-6"
                   >
                     {secondary_button_text}
                   </PrismicNextLink>

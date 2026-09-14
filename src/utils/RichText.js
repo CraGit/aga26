@@ -3,28 +3,28 @@ import { PrismicNextImage } from "@prismicio/next";
 
 const rtfComponents = {
   heading1: ({ children }) => (
-    <h1 className="text-heading-1 color-gray-900 mb-30">{children}</h1>
+    <h1 className="text-heading-1 color-green-900 mb-30">{children}</h1>
   ),
   heading2: ({ children }) => (
-    <h2 className="text-heading-2 color-gray-900 mb-25">{children}</h2>
+    <h2 className="text-heading-2 color-green-900 mb-25">{children}</h2>
   ),
   heading3: ({ children }) => (
-    <h3 className="text-heading-3 color-gray-900 mb-20">{children}</h3>
+    <h3 className="text-heading-3 color-green-900 mb-20">{children}</h3>
   ),
   heading4: ({ children }) => (
-    <h4 className="text-heading-4 color-gray-900 mb-15">{children}</h4>
+    <h4 className="text-heading-4 color-green-900 mb-15">{children}</h4>
   ),
   heading5: ({ children }) => (
-    <h5 className="text-heading-5 color-gray-900 mb-15">{children}</h5>
+    <h5 className="text-heading-5 color-green-900 mb-15">{children}</h5>
   ),
   heading6: ({ children }) => (
-    <h6 className="text-heading-6 color-gray-900 mb-10">{children}</h6>
+    <h6 className="text-heading-6 color-green-900 mb-10">{children}</h6>
   ),
   paragraph: ({ children }) => (
     <p className="text-body-text color-gray-600 mb-20">{children}</p>
   ),
   strong: ({ children }) => (
-    <strong className="color-gray-900">{children}</strong>
+    <strong className="color-green-900">{children}</strong>
   ),
   hyperlink: ({ node, children, key }) => (
     <PrismicNextLink
@@ -93,28 +93,28 @@ const rtfComponents = {
 // Light theme components for white/light backgrounds
 const rtfComponentsLight = {
   heading1: ({ children }) => (
-    <h1 className="text-heading-1 color-gray-900 mb-30">{children}</h1>
+    <h1 className="text-heading-1 color-green-900 mb-30">{children}</h1>
   ),
   heading2: ({ children }) => (
-    <h2 className="text-heading-2 color-gray-900 mb-25">{children}</h2>
+    <h2 className="text-heading-2 color-green-900 mb-25">{children}</h2>
   ),
   heading3: ({ children }) => (
-    <h3 className="text-heading-3 color-gray-900 mb-20">{children}</h3>
+    <h3 className="text-heading-3 color-green-900 mb-20">{children}</h3>
   ),
   heading4: ({ children }) => (
-    <h4 className="text-heading-4 color-gray-900 mb-15">{children}</h4>
+    <h4 className="text-heading-4 color-green-900 mb-15">{children}</h4>
   ),
   heading5: ({ children }) => (
-    <h5 className="text-heading-5 color-gray-900 mb-15">{children}</h5>
+    <h5 className="text-heading-5 color-green-900 mb-15">{children}</h5>
   ),
   heading6: ({ children }) => (
-    <h6 className="text-heading-6 color-gray-900 mb-10">{children}</h6>
+    <h6 className="text-heading-6 color-green-900 mb-10">{children}</h6>
   ),
   paragraph: ({ children }) => (
     <p className="text-body-text color-gray-600 mb-20">{children}</p>
   ),
   strong: ({ children }) => (
-    <strong className="color-gray-900">{children}</strong>
+    <strong className="color-green-900">{children}</strong>
   ),
   hyperlink: ({ node, children, key }) => (
     <PrismicNextLink

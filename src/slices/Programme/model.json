@@ -1,0 +1,61 @@
+{
+  "id": "programme",
+  "type": "SharedSlice",
+  "name": "Programme",
+  "description": "Programme schedule table with time and activity columns",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Section Heading",
+            "placeholder": "6th October 2026 - Tuesday"
+          }
+        },
+        "time_header": {
+          "type": "Text",
+          "config": {
+            "label": "Time Column Header",
+            "placeholder": "Time"
+          }
+        },
+        "activity_header": {
+          "type": "Text",
+          "config": {
+            "label": "Activity Column Header",
+            "placeholder": "Activity"
+          }
+        },
+        "rows": {
+          "type": "Group",
+          "config": {
+            "label": "Schedule Rows",
+            "fields": {
+              "time": {
+                "type": "Text",
+                "config": {
+                  "label": "Time",
+                  "placeholder": "14:00 – 19:00"
+                }
+              },
+              "activity": {
+                "type": "Text",
+                "config": {
+                  "label": "Activity",
+                  "placeholder": "Early Registration"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -15,7 +15,7 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="col-md-8 col-sm-6 text-center text-md-end">
-                <span className="color-gray-900 text-heading-6 mr-30 text-mb-sm-20">
+                <span className="color-green-900 text-heading-6 mr-30 text-mb-sm-20">
                   Ready to get started?
                 </span>
                 <a
@@ -74,7 +74,7 @@ const Footer = () => {
                   <Link href="/programs">Call for Papers</Link>
                 </li>
                 <li>
-                  <Link href="/programs">Schedule</Link>
+                  <Link href="/programme">Programme</Link>
                 </li>
                 <li>
                   <Link href="/committees">Organizing Committee</Link>

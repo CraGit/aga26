@@ -1,0 +1,37 @@
+{
+  "description": "Standalone centered call-to-action button section",
+  "id": "cta",
+  "name": "Cta",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "button": {
+          "config": {
+            "allowText": true,
+            "customtypes": [
+              "page"
+            ],
+            "label": "Button",
+            "placeholder": "View Programme",
+            "select": null
+          },
+          "type": "Link"
+        },
+        "heading": {
+          "config": {
+            "label": "Heading",
+            "placeholder": "Explore the programme"
+          },
+          "type": "Text"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}

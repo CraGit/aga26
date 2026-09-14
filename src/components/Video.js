@@ -36,7 +36,7 @@ const Video = ({ slice }) => {
           <div className="col-lg-1 col-sm-1 col-12" />
           <div className="col-lg-10 col-sm-10 col-12 text-center">
             {heading && (
-              <h2 className="text-heading-1 color-gray-900 mb-10">{heading}</h2>
+              <h2 className="text-heading-1 color-green-900 mb-10">{heading}</h2>
             )}
             {content && (
               <p className="text-body-lead-large color-gray-600 mt-20">

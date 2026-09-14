@@ -12,7 +12,7 @@ const RegistrationFees = ({ slice }: RegistrationFeesProps) => {
         <section className="section-box mt-50 mb-50">
             <div className="container">
                 {heading && (
-                    <h2 className="text-heading-2 color-gray-900 mb-40 text-center">{heading}</h2>
+                    <h2 className="text-heading-2 color-green-900 mb-40 text-center">{heading}</h2>
                 )}
                 <div className="row justify-content-center">
                     <div className="col-lg-6 col-md-8 col-12">

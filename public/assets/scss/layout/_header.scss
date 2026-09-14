@@ -12,13 +12,17 @@
             align-items: center;
             width: 100%;
             .header-logo {
-                margin-right: 50px;
+                margin-right: 24px;
+                flex-shrink: 0;
             }
             .header-nav
             {
-                display: inline-block;
-                width: 100%;
-                text-align: center;
+                display: flex;
+                flex: 1;
+                min-width: 0;
+                width: auto;
+                align-items: center;
+                justify-content: flex-end;
             }
         }
         .header-right
@@ -32,17 +36,25 @@
         }
     }
     .nav-main-menu {
-        width: 100%;
+        width: auto;
+        max-width: 100%;
         padding: 0px;
-        float: left;
+        float: none;
     }
     .main-menu {
-        display: inline-block;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0;
         padding-top: 5px;
+        margin: 0;
+        list-style: none;
         li {
-            float: left;
+            float: none;
             position: relative;
             text-align: left;
+            flex-shrink: 0;
             &.has-children {
                 > a {
                     &::after {
@@ -73,12 +85,13 @@
                 font-family: $font-text;
                 font-style: normal;
                 font-weight: 400;
-                font-size: $font-lg;
+                font-size: 16px;
                 color: $color-gray-900;
                 display: block;
-                padding: 30px 22px 30px 22px;
+                padding: 30px 12px;
                 text-decoration: none;
                 position: relative;
+                white-space: nowrap;
                 &:hover {
                     color: $color-green-900;
                     i {

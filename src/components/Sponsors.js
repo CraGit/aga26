@@ -10,7 +10,7 @@ const Sponsors = ({ slice }) => {
     <SectionWrapper>
       <div className="text-center">
         {heading && (
-          <h2 className="text-heading-1 color-gray-900 mb-20">{heading}</h2>
+          <h2 className="text-heading-1 color-green-900 mb-20">{heading}</h2>
         )}
         {subheading && (
           <p className="text-body-lead color-gray-600 mb-60">{subheading}</p>

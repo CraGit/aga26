@@ -11,7 +11,7 @@ const KeyDates = ({ slice }) => {
       <div className="key-dates">
         {heading && (
           <div className="text-center mb-40">
-            <h2 className="text-heading-1 color-gray-900">{heading}</h2>
+            <h2 className="text-heading-1 color-green-900">{heading}</h2>
           </div>
         )}
 

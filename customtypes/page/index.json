@@ -54,6 +54,12 @@
             },
             "hero_bg": {
               "type": "SharedSlice"
+            },
+            "programme": {
+              "type": "SharedSlice"
+            },
+            "cta": {
+              "type": "SharedSlice"
             }
           }
         }

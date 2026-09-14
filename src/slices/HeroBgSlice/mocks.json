@@ -1,98 +1,120 @@
 [
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"key": "b4a925f9-6c0c-41fc-8226-35999ff11a8f",
+				"value": []
+			}
+		],
 		"primary": {
 			"background_image": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
-					"width": 6597,
-					"height": 4398
-				},
-				"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
-				"width": 6597,
-				"height": 4398,
+				"alt": "Split Croatia",
 				"edit": {
-					"zoom": 1,
+					"background": "transparent",
 					"crop": {
 						"x": 0,
 						"y": 0
 					},
-					"background": "transparent"
+					"zoom": 1
 				},
-				"alt": "refused",
+				"height": 3456,
+				"origin": {
+					"height": 3456,
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+					"width": 3456
+				},
+				"url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+				"width": 3456,
 				"credits": null,
 				"__TYPE__": "ImageContent"
 			},
+			"date": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "October 7-10 2026"
+			},
 			"large_text": {
 				"__TYPE__": "FieldContent",
-				"value": "command",
-				"type": "Text"
+				"type": "Text",
+				"value": "IAMU AGA26"
+			},
+			"location": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Split, Croatia"
+			},
+			"logos": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "f945a3e1-524d-4294-aaa4-24dc15a2131c",
+						"value": [
+							[
+								"logo",
+								{
+									"alt": "logo",
+									"edit": {
+										"background": "transparent",
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"zoom": 1
+									},
+									"height": 4000,
+									"origin": {
+										"height": 4000,
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+										"width": 6000
+									},
+									"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+									"width": 6000,
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"link",
+								{
+									"key": "96891916-dde8-4f21-8f1e-f4360f402104",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							]
+						]
+					}
+				]
+			},
+			"overlay": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "dark-blue"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Human Centered Digital Ocean: Educating safe & green global maritime professionals"
 			},
 			"title": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "heading1",
 						"content": {
-							"text": "Carefully"
-						}
+							"text": "The 26th Annual General Assembly"
+						},
+						"type": "heading1"
 					}
 				]
-			},
-			"subtitle": {
-				"__TYPE__": "FieldContent",
-				"value": "was",
-				"type": "Text"
-			},
-			"date": {
-				"__TYPE__": "FieldContent",
-				"value": "roar",
-				"type": "Text"
-			},
-			"location": {
-				"__TYPE__": "FieldContent",
-				"value": "fix",
-				"type": "Text"
-			},
-			"overlay": {
-				"__TYPE__": "FieldContent",
-				"value": "soft-blue",
-				"type": "Select"
-			},
-			"logos": [
-				{
-					"logo": {
-						"__TYPE__": "ImageContent",
-						"origin": { "id": "logo1", "url": "https://via.placeholder.com/280x80?text=Logo+1", "width": 280, "height": 80 },
-						"url": "https://via.placeholder.com/280x80?text=Logo+1",
-						"width": 280,
-						"height": 80,
-						"alt": "Logo 1",
-						"__TYPE__": "ImageContent"
-					},
-					"link": { "link_type": "Web", "url": "https://example.com" }
-				},
-				{
-					"logo": {
-						"__TYPE__": "ImageContent",
-						"origin": { "id": "logo2", "url": "https://via.placeholder.com/240x80?text=Logo+2", "width": 240, "height": 80 },
-						"url": "https://via.placeholder.com/240x80?text=Logo+2",
-						"width": 240,
-						"height": 80,
-						"alt": "Logo 2",
-						"__TYPE__": "ImageContent"
-					},
-					"link": { "link_type": "Web", "url": "https://example.org" }
-				}
-			]
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
 			}
-		]
+		},
+		"variation": "default"
 	}
 ]

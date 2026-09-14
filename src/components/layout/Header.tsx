@@ -50,13 +50,13 @@ const Header = ({ handleOpen, headerStyle, isSidebarOpen }: HeaderProps) => {
                                             <Link href="/registration">Registration</Link>
                                         </li>
                                         <li>
+                                            <Link href="/programme">Programme</Link>
+                                        </li>
+                                        <li>
                                             <Link href="/travel-and-accommodations">Travel and Accommodations</Link>
                                         </li>
                                         {/* <li>
                                             <Link href="/iamus">IAMUS</Link>
-                                        </li> */}
-                                        {/* <li>
-                                            <Link href="/programs">Programs</Link>
                                         </li> */}
                                         {/* <li>
                                             <Link href="/registration">Registration</Link>

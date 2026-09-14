@@ -490,7 +490,7 @@ a {
   font-size: 56px;
   line-height: 64px;
   letter-spacing: -1%;
-  color: #101828;
+  color: #0F385C;
 }
 
 .text-heading-2 {
@@ -553,6 +553,9 @@ a {
 }
 
 .color-green-900 {
+  color: #0F385C !important;
+}
+.color-brand-1 {
   color: #0F385C !important;
 }
 
@@ -861,7 +864,7 @@ h6,
 .heading-lg,
 .heading-sm-1 {
   font-family: var(--noto);
-  color: #101828;
+  color: #0F385C;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -1016,7 +1019,7 @@ h6 {
 }
 .btn.btn-square {
   border-radius: 4px;
-  background-color: #101828;
+  background-color: #0F385C;
   color: #ffffff;
   font-size: 14px;
   line-height: 14px;
@@ -1026,18 +1029,18 @@ h6 {
 }
 .btn.btn-square:hover {
   background-color: #ffffff;
-  color: #101828;
-  border-color: #101828;
+  color: #0F385C;
+  border-color: #0F385C;
 }
 .btn.btn-black-border {
-  border: 1px solid #101828;
+  border: 1px solid #0F385C;
   padding: 12px 22px;
   border-radius: 8px;
   width: 100%;
   text-align: left;
 }
 .btn.btn-black-border:hover {
-  background-color: #101828;
+  background-color: #0F385C;
   background-image: url(../imgs/template/icons/arrow-small-right-w.svg);
   background-repeat: no-repeat;
   color: #ffffff;
@@ -1102,7 +1105,7 @@ h6 {
 }
 .btn.btn-black {
   color: #ffffff;
-  background-color: #101828;
+  background-color: #0F385C;
   border-radius: 50px;
   font-size: 18px;
   line-height: 22px;
@@ -1113,13 +1116,13 @@ h6 {
   background-color: #F2F4F7;
   background-image: url(../imgs/template/icons/fi-sr-arrow-small-right.svg);
   background-repeat: no-repeat;
-  color: #101828;
+  color: #0F385C;
   transform: translateY(-2px);
   transition: 0.2s;
 }
 .btn.btn-black:hover {
   background-color: #E4E7EC;
-  color: #101828;
+  color: #0F385C;
 }
 .btn.btn-md {
   padding: 16px 20px;
@@ -3441,12 +3444,16 @@ label {
   width: 100%;
 }
 .header .main-header .header-left .header-logo {
-  margin-right: 50px;
+  margin-right: 24px;
+  flex-shrink: 0;
 }
 .header .main-header .header-left .header-nav {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  align-items: center;
+  justify-content: flex-end;
 }
 .header .main-header .header-right {
   max-width: 225px;
@@ -3456,18 +3463,26 @@ label {
   text-align: right;
 }
 .header .nav-main-menu {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   padding: 0px;
-  float: left;
+  float: none;
 }
 .header .main-menu {
-  display: inline-block;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0;
   padding-top: 5px;
+  margin: 0;
+  list-style: none;
 }
 .header .main-menu li {
-  float: left;
+  float: none;
   position: relative;
   text-align: left;
+  flex-shrink: 0;
 }
 .header .main-menu li.has-children > a::after {
   content: "\f151";
@@ -3495,12 +3510,13 @@ label {
   font-family: var(--chivo);
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   color: #101828;
   display: block;
-  padding: 30px 22px 30px 22px;
+  padding: 30px 12px;
   text-decoration: none;
   position: relative;
+  white-space: nowrap;
 }
 .header .main-menu li a:hover {
   color: #0F385C;

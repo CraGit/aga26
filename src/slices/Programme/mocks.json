@@ -1,0 +1,73 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "6th October 2026 - Tuesday",
+				"type": "Text"
+			},
+			"time_header": {
+				"__TYPE__": "FieldContent",
+				"value": "Time",
+				"type": "Text"
+			},
+			"activity_header": {
+				"__TYPE__": "FieldContent",
+				"value": "Activity",
+				"type": "Text"
+			},
+			"rows": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "a1b2c3d4-e5f6-4789-a012-3456789abcde",
+						"value": [
+							[
+								"time",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "14:00 – 19:00",
+									"type": "Text"
+								}
+							],
+							[
+								"activity",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Early Registration - Registration Desk at Radisson Blu Resort & Spa",
+									"type": "Text"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "b2c3d4e5-f6a7-4890-b123-456789abcdef",
+						"value": [
+							[
+								"time",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "19:00 – 21:00",
+									"type": "Text"
+								}
+							],
+							[
+								"activity",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Welcome Reception at Radisson Blu Resort & Spa outdoor pool",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

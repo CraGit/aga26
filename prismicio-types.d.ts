@@ -79,7 +79,9 @@ type PageDocumentDataSlicesSlice =
   | VideoSliceSlice
   | HeroSliceSlice
   | KeyDatesSlice
-  | HeroBgSlice;
+  | HeroBgSlice
+  | ProgrammeSlice
+  | CtaSlice;
 
 /**
  * Content for Page documents
@@ -197,6 +199,58 @@ export type ContentSlice = prismic.SharedSlice<
   "content",
   ContentSliceVariation
 >;
+
+/**
+ * Primary content in *Cta → Default → Primary*
+ */
+export interface CtaSliceDefaultPrimary {
+  /**
+   * Button field in *Cta → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: View Programme
+   * - **API ID Path**: cta.default.primary.button
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * Heading field in *Cta → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Explore the programme
+   * - **API ID Path**: cta.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Cta Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CtaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CtaSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Cta*
+ */
+type CtaSliceVariation = CtaSliceDefault;
+
+/**
+ * Cta Shared Slice
+ *
+ * - **API ID**: `cta`
+ * - **Description**: Standalone centered call-to-action button section
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
 
 /**
  * Primary content in *DatesSlice → Default → Primary*
@@ -738,6 +792,106 @@ export type KeyDatesSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Programme → Default → Primary → Schedule Rows*
+ */
+export interface ProgrammeSliceDefaultPrimaryRowsItem {
+  /**
+   * Time field in *Programme → Default → Primary → Schedule Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: 14:00 – 19:00
+   * - **API ID Path**: programme.default.primary.rows[].time
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  time: prismic.KeyTextField;
+
+  /**
+   * Activity field in *Programme → Default → Primary → Schedule Rows*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Early Registration
+   * - **API ID Path**: programme.default.primary.rows[].activity
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  activity: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Programme → Default → Primary*
+ */
+export interface ProgrammeSliceDefaultPrimary {
+  /**
+   * Section Heading field in *Programme → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: 6th October 2026 - Tuesday
+   * - **API ID Path**: programme.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Time Column Header field in *Programme → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Time
+   * - **API ID Path**: programme.default.primary.time_header
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  time_header: prismic.KeyTextField;
+
+  /**
+   * Activity Column Header field in *Programme → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Activity
+   * - **API ID Path**: programme.default.primary.activity_header
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  activity_header: prismic.KeyTextField;
+
+  /**
+   * Schedule Rows field in *Programme → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: programme.default.primary.rows[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  rows: prismic.GroupField<Simplify<ProgrammeSliceDefaultPrimaryRowsItem>>;
+}
+
+/**
+ * Default variation for Programme Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ProgrammeSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProgrammeSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Programme*
+ */
+type ProgrammeSliceVariation = ProgrammeSliceDefault;
+
+/**
+ * Programme Shared Slice
+ *
+ * - **API ID**: `programme`
+ * - **Description**: Programme schedule table with time and activity columns
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ProgrammeSlice = prismic.SharedSlice<
+  "programme",
+  ProgrammeSliceVariation
+>;
+
+/**
  * Primary content in *RegistrationFees → Default → Primary*
  */
 export interface RegistrationFeesSliceDefaultPrimary {
@@ -1078,6 +1232,10 @@ declare module "@prismicio/client" {
       ContentSliceDefaultPrimary,
       ContentSliceVariation,
       ContentSliceDefault,
+      CtaSlice,
+      CtaSliceDefaultPrimary,
+      CtaSliceVariation,
+      CtaSliceDefault,
       DatesSliceSlice,
       DatesSliceSliceDefaultPrimary,
       DatesSliceSliceVariation,
@@ -1101,6 +1259,11 @@ declare module "@prismicio/client" {
       KeyDatesSliceDefaultItem,
       KeyDatesSliceVariation,
       KeyDatesSliceDefault,
+      ProgrammeSlice,
+      ProgrammeSliceDefaultPrimaryRowsItem,
+      ProgrammeSliceDefaultPrimary,
+      ProgrammeSliceVariation,
+      ProgrammeSliceDefault,
       RegistrationFeesSlice,
       RegistrationFeesSliceDefaultPrimary,
       RegistrationFeesSliceDefaultItem,
