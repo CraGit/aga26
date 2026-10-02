@@ -9310,4 +9310,45 @@ input.qty-val {
   }
 }
 
+.programme-downloads {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 856px;
+  margin: 40px auto 60px;
+  padding: 0 16px;
+}
+
+.programme-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #0F385C;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.programme-download-link:hover {
+  color: #0F385C;
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+.programme-download-link svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .programme-downloads {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    gap: 24px;
+    margin: 32px auto 40px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

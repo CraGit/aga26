@@ -3,6 +3,7 @@
 import Content from "./ContentSlice";
 import Cta from "./Cta";
 import DatesSlice from "./DatesSlice";
+import Downloads from "./Downloads";
 import FaqSlice from "./FaqSlice";
 import HeroBgSlice from "./HeroBgSlice";
 import HeroSlice from "./HeroSlice";
@@ -17,6 +18,7 @@ export const components = {
 	content: Content,
 	cta: Cta,
 	dates_slice: DatesSlice,
+	downloads: Downloads,
 	faq_slice: FaqSlice,
 	hero_bg: HeroBgSlice,
 	hero_slice: HeroSlice,

@@ -1,0 +1,26 @@
+{
+  "id": "downloads",
+  "name": "Downloads",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "files": {
+          "config": {
+            "allowTargetBlank": true,
+            "allowText": true,
+            "label": "PDF Downloads",
+            "repeat": true
+          },
+          "type": "Link"
+        }
+      },
+      "version": ""
+    }
+  ]
+}
