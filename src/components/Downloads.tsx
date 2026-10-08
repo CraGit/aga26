@@ -24,6 +24,30 @@ const PdfIcon = () => (
   </svg>
 );
 
+const FolderIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    width="48"
+    height="48"
+    aria-hidden="true"
+  >
+    <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+  </svg>
+);
+
+const isGalleryLink = (text?: string | null, url?: string | null) => {
+  const label = (text || "").toLowerCase();
+  const href = (url || "").toLowerCase();
+  return (
+    label.includes("gallery") ||
+    href.includes("sharepoint.com") ||
+    href.includes("drive.google.com") ||
+    href.includes("/:f:/")
+  );
+};
+
 const Downloads = ({ slice }: DownloadsProps) => {
   const { files } = slice.primary;
 
@@ -39,14 +63,15 @@ const Downloads = ({ slice }: DownloadsProps) => {
             <div className="programme-downloads">
               {files.map((file, index) => {
                 if (!isFilled.link(file)) return null;
+                const gallery = isGalleryLink(file.text, file.url);
                 return (
                   <PrismicNextLink
                     key={file.key || index}
                     field={file}
                     className="programme-download-link"
                   >
-                    <PdfIcon />
-                    <span>{file.text || "Download PDF"}</span>
+                    {gallery ? <FolderIcon /> : <PdfIcon />}
+                    <span>{file.text || (gallery ? "Open gallery" : "Download PDF")}</span>
                   </PrismicNextLink>
                 );
               })}

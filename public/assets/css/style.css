@@ -9312,10 +9312,11 @@ input.qty-val {
 
 .programme-downloads {
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
-  gap: 60px;
-  max-width: 856px;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  justify-content: center;
+  column-gap: 60px;
+  row-gap: 36px;
+  max-width: 900px;
   margin: 40px auto 60px;
   padding: 0 16px;
 }
