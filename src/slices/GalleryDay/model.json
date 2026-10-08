@@ -1,0 +1,38 @@
+{
+  "id": "gallery_day",
+  "name": "GalleryDay",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "label": "Day heading",
+            "placeholder": "Day 1 — 6 October 2026"
+          },
+          "type": "Text"
+        },
+        "photos": {
+          "config": {
+            "fields": {
+              "image": {
+                "config": {
+                  "label": "Photo"
+                },
+                "type": "Image"
+              }
+            },
+            "label": "Photos"
+          },
+          "type": "Group"
+        }
+      },
+      "version": ""
+    }
+  ]
+}

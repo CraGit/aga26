@@ -58,6 +58,9 @@
             },
             "downloads": {
               "type": "SharedSlice"
+            },
+            "gallery_day": {
+              "type": "SharedSlice"
             }
           }
         },

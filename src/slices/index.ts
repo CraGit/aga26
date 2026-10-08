@@ -5,6 +5,7 @@ import Cta from "./Cta";
 import DatesSlice from "./DatesSlice";
 import Downloads from "./Downloads";
 import FaqSlice from "./FaqSlice";
+import GalleryDay from "./GalleryDay";
 import HeroBgSlice from "./HeroBgSlice";
 import HeroSlice from "./HeroSlice";
 import KeyDates from "./KeyDatesSlice";
@@ -20,6 +21,7 @@ export const components = {
 	dates_slice: DatesSlice,
 	downloads: Downloads,
 	faq_slice: FaqSlice,
+	gallery_day: GalleryDay,
 	hero_bg: HeroBgSlice,
 	hero_slice: HeroSlice,
 	key_dates: KeyDates,

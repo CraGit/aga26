@@ -53,6 +53,9 @@ const Header = ({ handleOpen, headerStyle, isSidebarOpen }: HeaderProps) => {
                                             <Link href="/programme">Programme</Link>
                                         </li>
                                         <li>
+                                            <Link href="/gallery">Gallery</Link>
+                                        </li>
+                                        <li>
                                             <Link href="/travel-and-accommodations">Travel and Accommodations</Link>
                                         </li>
                                         {/* <li>
