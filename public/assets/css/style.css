@@ -9394,6 +9394,12 @@ input.qty-val {
   transform: scale(1.04);
 }
 
+.gallery-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
 .gallery-lightbox {
   position: fixed;
   inset: 0;
