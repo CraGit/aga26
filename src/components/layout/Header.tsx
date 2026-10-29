@@ -47,10 +47,13 @@ const Header = ({ handleOpen, headerStyle, isSidebarOpen }: HeaderProps) => {
                                             <Link href="/committees">Committees</Link>
                                         </li>
                                         <li>
-                                            <Link href="/registration">Registration</Link>
+                                            <Link href="/programme">Programme</Link>
                                         </li>
                                         <li>
-                                            <Link href="/programme">Programme</Link>
+                                            <Link href="/publications">Publications</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/certificates">Certificates</Link>
                                         </li>
                                         <li>
                                             <Link href="/gallery">Gallery</Link>

@@ -16,15 +16,14 @@ const Footer = () => {
               </div>
               <div className="col-md-8 col-sm-6 text-center text-md-end">
                 <span className="color-green-900 text-heading-6 mr-30 text-mb-sm-20">
-                  Ready to get started?
+                  Conference materials
                 </span>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfck3IpHfoDstQ8WHxsKx1M5260fjtj3tnvGdmjqYwBTCoS4Q/viewform"
-                  target="_blank"
-                  className="btn btn-square"
-                >
-                  Registration Form
-                </a>
+                <Link href="/publications" className="btn btn-square mr-15">
+                  Publications
+                </Link>
+                <Link href="/certificates" className="btn btn-square">
+                  Certificates
+                </Link>
               </div>
             </div>
           </div>
@@ -53,6 +52,12 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link href="/programme">Programme</Link>
+                </li>
+                <li>
+                  <Link href="/publications">Publications</Link>
+                </li>
+                <li>
+                  <Link href="/certificates">Certificates</Link>
                 </li>
                 <li>
                   <Link href="/gallery">Gallery</Link>

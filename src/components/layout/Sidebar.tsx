@@ -43,10 +43,13 @@ const Sidebar = ({ openClass, handleClose, isOpen }: SidebarProps) => {
                                             <Link href="/committees" onClick={handleClose}>Committees</Link>
                                         </li>
                                         <li>
-                                            <Link href="/registration" onClick={handleClose}>Registration</Link>
+                                            <Link href="/programme" onClick={handleClose}>Programme</Link>
                                         </li>
                                         <li>
-                                            <Link href="/programme" onClick={handleClose}>Programme</Link>
+                                            <Link href="/publications" onClick={handleClose}>Publications</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/certificates" onClick={handleClose}>Certificates</Link>
                                         </li>
                                         <li>
                                             <Link href="/gallery" onClick={handleClose}>Gallery</Link>
