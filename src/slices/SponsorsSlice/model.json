@@ -1,49 +1,56 @@
 {
-  "id": "sponsors",
-  "type": "SharedSlice",
-  "name": "Sponsors",
   "description": "Sponsors",
+  "id": "sponsors",
+  "name": "Sponsors",
+  "type": "SharedSlice",
   "variations": [
     {
-      "id": "default",
-      "name": "Default",
-      "docURL": "...",
-      "version": "initial",
       "description": "Default",
+      "docURL": "...",
+      "id": "default",
       "imageUrl": "",
-      "primary": {
-        "heading": {
-          "type": "Text",
-          "config": {
-            "label": "Heading",
-            "placeholder": "Trusted by the world's leading companies"
-          }
-        },
-        "subheading": {
-          "type": "Text",
-          "config": {
-            "label": "Subheading",
-            "placeholder": "Join the companies that trust us"
-          }
-        }
-      },
       "items": {
         "logo": {
-          "type": "Image",
           "config": {
-            "label": "Logo",
             "constraint": {},
+            "label": "Logo",
             "thumbnails": []
-          }
+          },
+          "type": "Image"
         },
         "company_name": {
-          "type": "Text",
           "config": {
             "label": "Company Name",
             "placeholder": "Company name for alt text"
-          }
+          },
+          "type": "Text"
+        },
+        "link": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Link"
+          },
+          "type": "Link"
         }
-      }
+      },
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "label": "Heading",
+            "placeholder": "Trusted by the world's leading companies"
+          },
+          "type": "Text"
+        },
+        "subheading": {
+          "config": {
+            "label": "Subheading",
+            "placeholder": "Join the companies that trust us"
+          },
+          "type": "Text"
+        }
+      },
+      "version": "initial"
     }
   ]
 }

@@ -1,6 +1,25 @@
 "use client";
-import { PrismicNextImage } from "@prismicio/next";
+import { isFilled } from "@prismicio/client";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import SectionWrapper from "./layout/SectionWrapper";
+
+const logoStyle = {
+  filter: "grayscale(100%)",
+  opacity: "0.7",
+  transition: "all 0.3s ease",
+  maxWidth: "100%",
+  maxHeight: "60px",
+  height: "auto",
+  objectFit: "contain",
+};
+
+const wrapStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "80px",
+  padding: "10px",
+};
 
 const Sponsors = ({ slice }) => {
   const { heading, subheading } = slice.primary;
@@ -17,45 +36,39 @@ const Sponsors = ({ slice }) => {
         )}
       </div>
       <ul className="list-partners" style={{ gap: "20px" }}>
-        {sponsors.map((sponsor, index) => (
-          <li key={index} style={{ marginBottom: "30px" }}>
-            <a
-              href="#"
-              style={{
-                cursor: "default",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "80px",
-                padding: "10px",
+        {sponsors.map((sponsor, index) => {
+          const hasLink = isFilled.link(sponsor.link);
+          const logo = sponsor.logo && (
+            <PrismicNextImage
+              field={sponsor.logo}
+              alt={sponsor.company_name || "Company logo"}
+              style={logoStyle}
+              onMouseEnter={(e) => {
+                e.target.style.filter = "grayscale(0%)";
+                e.target.style.opacity = "1";
               }}
-            >
-              {sponsor.logo && (
-                <PrismicNextImage
-                  field={sponsor.logo}
-                  alt={sponsor.company_name || "Company logo"}
-                  style={{
-                    filter: "grayscale(100%)",
-                    opacity: "0.7",
-                    transition: "all 0.3s ease",
-                    maxWidth: "100%",
-                    maxHeight: "60px",
-                    height: "auto",
-                    objectFit: "contain",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.filter = "grayscale(0%)";
-                    e.target.style.opacity = "1";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.filter = "grayscale(100%)";
-                    e.target.style.opacity = "0.7";
-                  }}
-                />
+              onMouseLeave={(e) => {
+                e.target.style.filter = "grayscale(100%)";
+                e.target.style.opacity = "0.7";
+              }}
+            />
+          );
+
+          return (
+            <li key={index} style={{ marginBottom: "30px" }}>
+              {hasLink ? (
+                <PrismicNextLink
+                  field={sponsor.link}
+                  style={{ ...wrapStyle, cursor: "pointer" }}
+                >
+                  {logo}
+                </PrismicNextLink>
+              ) : (
+                <span style={{ ...wrapStyle, cursor: "default" }}>{logo}</span>
               )}
-            </a>
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     </SectionWrapper>
   );
